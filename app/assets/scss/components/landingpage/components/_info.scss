@@ -1,0 +1,104 @@
+.landingpage {
+  .info {
+    background-color: $white;
+    min-height: 600px;
+    .container {
+      height: 600px;
+      h3 {
+        margin-top: 70px;
+        text-align: center;
+        .pressed {
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $primary-color;
+        }
+      }
+      .sa {
+        margin-top: 70px;
+        h4.title {
+          color: $steel;
+          font-weight: 700;
+        }
+        ul.inline-list.download {
+          margin-top: 10px;
+          margin-left: auto;
+          width: 450px;
+          > li {
+            border-radius: $global-radius;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 120px;
+            height: 120px;
+            a {
+              width: 100%;
+              height: 100%;
+              padding-top: 15px;
+              text-align: center;
+              color: $white;
+              transition: all 0.3s ease-in-out 0;
+              font-size: 0.9em;
+              font-weight: 700;
+              span {
+                display: block;
+                margin: 0 auto 5px;
+                width: 42px;
+                height: 50px;
+                background-size: cover;
+              }
+            }
+          }
+          .register.button {
+            font-weight: 700;
+          }
+          .ios {
+            background: url("assets/img/landingpage/2-ios.png") no-repeat;
+            &:hover {
+              background: url("assets/img/landingpage/2-ios-hover.png") no-repeat;
+            }
+          }
+          .android {
+            background: url("assets/img/landingpage/2-adr.png") no-repeat;
+            &:hover {
+              background: url("assets/img/landingpage/2-adr-hover.png") no-repeat;
+            }
+          }
+          .window {
+            background: url("assets/img/landingpage/2-wp.png") no-repeat;
+          }
+        }
+      }
+    }
+    &.appear {
+      .tablet {
+        background: url("assets/img/landingpage/2-ipad.png") no-repeat;
+        position: absolute;
+        height: 193px;
+        width: 139px;
+        top: 160px;
+        left: 0;
+        z-index: 1;
+        @include animation(bounceInLeft 1.3s);
+      }
+      .laptop {
+        background: url("assets/img/landingpage/2-macbook.png") no-repeat;
+        position: absolute;
+        width: 386px;
+        height: 227px;
+        top: 210px;
+        left: 50px;
+        z-index: 2;
+        @include animation(bounceInLeft 1.6s);
+      }
+      .phone {
+        background: url("assets/img/landingpage/2-iphone.png") no-repeat;
+        position: absolute;
+        width: 190px;
+        height: 402px;
+        top: 147px;
+        left: 350px;
+        z-index: 3;
+        @include animation(bounceInLeft 2s);
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.player {
+    footer {
+	background-color: $iron;
+	border-radius: 0 0 10px 10px;
+	min-height: 80px;
+	.container {
+	    border-radius: 0 0 10px 10px;
+	    min-height: 0;
+	    float: left;
+	    padding: 20px 10px 20px;
+	    width: 100%;
+	    
+	    &.success {
+		background-color: $success-bg-color;
+		h3.icon-checkmark {
+		    border-radius: 50%;
+		    width: 50px;
+		    height: 50px;
+		    line-height: 50px;
+		    vertical-align: middle;
+		    background-color: $white;
+		    padding-top: 1px;
+		    color: $success-font-color;
+		    padding-left: 1px;
+		}
+		h4.result {
+		    color: $success-font-color;
+		    font-weight: 700;
+		    line-height: 44px;
+		}
+	    }
+	    &.fail {
+		background-color: $warning-bg-color;
+		h1.icon-cancel-circle {
+		    color: $warning-font-color;
+		}
+		h3.icon-close {
+		    border-radius: 50%;
+		    width: 50px;
+		    height: 50px;
+		    line-height: 50px;
+		    vertical-align: middle;
+		    background-color: $white;
+		    padding-top: 1px;
+		    color: $warning-font-color;
+		    padding-left: 1px;
+		}
+		h4 {
+		    &.result {
+			color: $warning-font-color;
+			font-weight: 700;
+			line-height: 44px;
+		    }
+		    &.correct.answer {
+			color: $warning-font-color;
+			margin-bottom: 1rem;
+		    }
+		}
+	    }
+	}    
+    }
+}

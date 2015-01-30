@@ -1,0 +1,40 @@
+<section class="app" plaza-main>
+  <div class="row main home-page plaza">
+    <div class="main-left" main-left></div>
+    <div class="main-center">
+      <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+          <h4 class="title vptl">Vật phẩm trợ lực</h4>
+          <a href="/" title="" class="back-lesson">Quay lại bài học</a>
+          <hr />
+        </div>
+        <div class="row items">
+          <div class="large-16 columns">
+            <div class="row item" ng-repeat="item in plaza.items">
+              <div class="large-3 columns">
+                <img ng-src="assets/img/{{item._id}}.png" alt="" />
+              </div>
+              <div class="large-9 columns">
+                <h5 class="name">{{item.name}}</h5>
+                <p class="info">{{item.info}}</p>
+              </div>
+              <div class="large-4 columns vp-tl">
+                <a ng-show="item.can_buy" tooltip="{{item.can_not_buy_message}}" class="radius button" ng-click="buy(item._id)">
+                  {{item.price}}
+                  <img class="rb" style="display:inline-block;" src="assets/img/lesson-memos-big.png" width="20"/>
+                </a>
+                <a ng-hide="item.can_buy" tooltip="{{item.can_not_buy_message}}" class="radius disabled button">
+                  {{item.price}}
+                  <img class="rb" style="display:inline-block;" src="assets/img/lesson-memos-big.png" width="20"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-right" main-right></div>
+  </div>
+</section>

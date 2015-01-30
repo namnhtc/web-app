@@ -1,0 +1,31 @@
+<h4>Bảng xếp hạng</h4>
+<tabset>
+<tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+<div class="row" ng-repeat="friend in tab.users">
+  <a ng-href="/profile/{{friend._id}}">
+    <div class="columns small-11 top-leaderboard">
+      <div class="columns small-3 avatar">
+        <img ng-src="{{friend.url_avatar || 'assets/img/profile-avatar-big.png'}}" style="width:100%;height:100%;border-radius:50%;"/>
+      </div>
+      <div class="columns small-11 nickname">{{friend.username}}</div>
+    </div>
+    <div class="columns small-5 exp">{{friend.earned_exp || 0}} XP</div>
+  </a>
+</div>
+</tab>
+</tabset>
+<div class="row">
+  <div class="columns small-16">
+    <a href="#" class="small-16 secondary memo-button facebook-search" ng-click="searchFbFriends()" >Tìm bạn trên facebook</a>
+  </div>
+</div>
+<div class="row">
+  <div class="columns small-8">
+    <a dropdown-toggle="#search-friend" class="small-16 secondary email-invitation memo-button">Mời</a>
+    <div id="search-friend" class="f-dropdown" leaderboard-email-invite show-on-click="true"></div>
+  </div>
+  <div class="columns small-8">
+    <a href="#" class="small-16 secondary memo-button memo-search" ng-click="searchFriends()">Tìm kiếm</a>
+  </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+{
+  "name": "angular-facebook",
+  "homepage": "https://github.com/Ciul/angularjs-facebook",
+  "authors": [
+    "Luis Carlos Osorio Jayk <luiscarlosjayk@gmail.com>"
+  ],
+  "description": "An AngularJS module to take approach of the Facebook Javascript SDK.",
+  "main": "lib/angular-facebook.js",
+  "keywords": [
+    "facebook",
+    "angularjs",
+    "sdk",
+    "auth"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.23",
+    "angular-mocks": "~1.2.23"
+  },
+  "_release": "95584bb7fc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "95584bb7fc31a6c9d4bd8d53a0f6b3e04b200301"
+  },
+  "_source": "https://github.com/hainp/angular-facebook.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/hainp/angular-facebook.git"
+}

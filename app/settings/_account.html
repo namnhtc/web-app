@@ -1,0 +1,102 @@
+<section class="app">
+<div class="setting-page">
+  <div class="main-left">
+    <div class="container">
+      <section class="setting-account">
+        <div class="row">
+          <h3 class="title left">Cài đặt tài khoản</h3>
+          <a class="small radius button right save-change" ng-click="saveChanges()">Lưu thay đổi</a>
+        </div>
+        <div class="row">
+          <div class="large-12 columns large-centered large-center">
+            <div class="row">
+              <div class="large-5 columns">Tên đăng nhập</div>
+              <div class="large-11 columns">
+                <input type="text" class="large-16" ng-model="user.username" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Email</div>
+              <div class="large-11 columns">
+                <input type="email" class="large-16" ng-model="user.email" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Điện thoại</div>
+              <div class="large-11 columns">
+                <input type="email" class="large-16" ng-model="user.mobile" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Micro</div>
+              <div class="large-11 columns">
+                <input type="radio" ng-model="setting.microEnabled" value="1" name="micro" id="micro-enable"/>
+                <label for="micro-enable">Mở</label>
+                <input type="radio" ng-model="setting.microEnabled" value="0" name="micro" id="micro-disable" />
+                <label for="micro-disable">Tắt</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Loa</div>
+              <div class="large-11 columns">
+                <input type="radio" ng-model="setting.speakerEnabled" value="1" name="speaker" id="speaker-enable"/>
+                <label for="speaker-enable">Mở</label>
+                <input type="radio" ng-model="setting.speakerEnabled" value="0" name="speaker" id="speaker-disable" />
+                <label for="speaker-disable">Tắt</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Tự động phát giọng nói</div>
+              <div class="large-11 columns">
+                <input type="radio" ng-model="setting.autoSoundEnabled" value="1" name="auto-sound" id="auto-sound-enable"/>
+                <label for="auto-sound-enable">Mở</label>
+                <input type="radio" ng-model="setting.autoSoundEnabled" value="0" name="auto-sound" id="auto-sound-disable" />
+                <label for="auto-sound-disable">Tắt</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns">Hiệu ứng âm thanh</div>
+              <div class="large-11 columns">
+                <input type="radio" ng-model="setting.soundEnabled" value="1" name="sound" id="sound-enable"/>
+                <label for="sound-enable">Mở</label>
+                <input type="radio" ng-model="setting.soundEnabled" value="0" name="sound" id="sound-disable" />
+                <label for="sound-disable">Tắt</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-5 columns img-avatar">Hình ảnh hồ sơ</div>
+              <div class="large-11 columns">
+                <img ng-src="{{user.url_avatar || 'assets/img/profile-avatar-big.png'}}" style="width:85px;height:85px;border-radius:50%;" />
+              </div>
+            </div><!--
+            <div class="row text-center">
+              <a ng-click="deactivate()">Hủy kích hoạt tài khoản của tôi</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section class="setting-password">
+        <h3 class="title">Mật khẩu</h3>
+        <div class="large-12 columns large-centered">
+          <div class="row">
+            <div class="large-5 columns">Mật khẩu mới</div>
+            <div class="large-11 columns">
+              <input type="password" class="large-16" ng-model="password"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-5 columns">Xác nhận mật khẩu</div>
+            <div class="large-11 columns">
+              <input type="password" class="large-16" ng-model="rePassword"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="main-right">
+    <side-nav></side-nav>
+  <app-version></app-version>
+</div>
+</div>
+</section>

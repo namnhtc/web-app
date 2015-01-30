@@ -1,0 +1,56 @@
+.player .question {
+  .select {
+    .answers {
+      .image {
+        background-color: $smoke;
+        border-radius: $global-radius;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        height: 220px;
+        width: 190px;
+        transition: all .2s ease-in-out;
+        &:hover, &.selected {
+          background-color: $primary-color;
+          label {
+            color: $white;
+          }
+        }
+        &.image-1 {
+          margin-left: 100px;
+        }
+        img {
+          margin-bottom: 10px;
+          height: 170px;
+          width: 170px;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+.hover-text{
+  display: none;
+}
+.hover-text p{
+  font-size: 11px;
+}
+.player .question .select .answers .image:hover .hover-text{
+  display: block;
+  height: 50px;
+  border-radius: 5px;
+  background: none repeat scroll 0% 0% rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  padding: 5px 15px;
+  width: 190px;
+  margin-left: -10px;
+}
+
+.player .question .judge .answers .answer > label:hover .hover-text{
+  display: block;
+}
+.container a.memo-button:hover .hover-text{
+  display:block;
+}

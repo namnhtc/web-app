@@ -1,0 +1,60 @@
+.player .question {
+    .form {
+	select {
+	    border-radius: 10px;
+	    border: 1px solid #ccc;
+	    color: #888;
+	    cursor: pointer;
+	    display: inline-block;
+	    height: 35px;
+	    margin: 0;
+	    min-width: 85px;
+	    outline: medium none;
+	}
+	label {
+	    position:relative;
+	    display: inline-block;
+	    margin-left: 5px;
+	    margin-right: 5px
+	}
+	label:after {
+	    content:'';
+	    color: #AAA;
+	    -webkit-transform:rotate(90deg);
+	    -moz-transform:rotate(90deg);
+	    -ms-transform:rotate(90deg);
+	    transform:rotate(90deg);
+	    right:4px;
+	    top:2px;
+	    padding:0 0 2px;
+	    border-bottom:1px solid #ddd;
+	    position:absolute;
+	    pointer-events:none;
+	}
+	label:before {
+	    background: none repeat scroll 0 0 $white;
+	    border-top: 1px solid #ddd;
+	    content: "";
+	    display: block;
+	    height: 34px;
+	    pointer-events: none;
+	    position: absolute;
+	    right: 1px;
+	    top: 0px;
+	    width: 20px;
+	}
+	.icon-arrow-down {
+	    color: $primary-color;
+	    font-size: 2em;
+	    height: 34px;
+	    pointer-events: none;
+	    position: absolute;
+	    right: 5px;
+	    top: 5px;
+	    width: 20px;
+	}
+	option {
+	    padding-right: 12px;
+	}
+    }
+}

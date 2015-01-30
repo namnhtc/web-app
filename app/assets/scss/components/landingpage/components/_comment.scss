@@ -1,0 +1,33 @@
+.landingpage {
+    .comments {
+        background-color: $white;
+        height: 250px;
+        .container {
+            padding: 60px;
+        }
+        .image {
+            border-radius: 50%;
+            height: 120px;
+            width: 120px;
+            background-color: $gainsboro;
+        }
+        .text {
+            background: url('assets/img/landingpage/6-textbox.png') no-repeat;
+            width: 540px;
+            height: 150px;
+            padding-top: 10px;
+            padding-left: 40px;
+            .name {
+                color: $primary-color;
+            }
+        }
+        .ant {
+            background: url('assets/img/landingpage/6-ant.png') no-repeat;
+            position: absolute;
+            width: 147px;
+            height: 126px;
+            left: 540px;
+            top: 0;
+        }
+    }
+}

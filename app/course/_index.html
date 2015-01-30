@@ -1,0 +1,29 @@
+<section class="app">
+  <div class="row main course-page">
+    <div class="main-center">
+      <div class="container">
+        <div class="large-5 columns large-centered">
+          <h3 class="title">Chọn khóa học</h3>
+          <div class="row" ng-repeat="course in courses">
+            <div class="large-16 columns">
+              <a class="reverse course" ng-class="{disabled: !course.enabled}" ng-click="selectCourse(course._id)">
+                <img ng-src="/assets/img/{{course._id}}.png" />
+                <span>{{course.name}}</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="large-12 columns large-centered text-center" style="color:#333;">
+          <div class="row">
+            <span style="color:#810c15;font-weight:700;">Memo</span> sẽ liên tục phát triển và đưa ra các khoá học mới,
+          </div>
+          <div class="row">
+            Bạn luôn có thể chọn học thêm một ngôn ngữ khác bất kì lúc nào.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>

@@ -1,0 +1,10 @@
+<div class="noti-item-inner">
+  <div class="noti-item-image"><img ng-src="{{friend.url_avatar || 'assets/img/profile-avatar-big.png'}}"/></div>
+  <div class="noti-item-content">{{message}}
+    <div>
+      <a class="noti-follow-button" ng-click="follow()" ng-hide="friend.is_friend">Kết bạn</a>
+      <a class="noti-follow-button" ng-click="unfollow()" ng-show="friend.is_friend && isTemporaryFriend">Đã thêm vào danh sách bạn bè</a>
+    </div>
+    <div class="noti-time-ago" am-time-ago="timeAgo"></div>
+  </div>
+</div>

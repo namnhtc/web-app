@@ -1,0 +1,187 @@
+.shield {
+    $skill-width: 100px;
+    $skill-height: 116px;
+    $skill-margin-left: 10px;
+    $skill-margin-right: $skill-margin-left;
+    $skill-margin-top: 0;
+
+    // Skill Icon Settings
+    $skill-icon-width: 40px;
+    $skill-icon-height: $skill-icon-width;
+    $skill-icon-margin-top: 0;
+    $skill-icon-margin-right: auto;
+    $skill-icon-margin-bottom: 5px;
+    $skill-icon-margin-left: $skill-icon-margin-right;
+
+    .skills {
+        float: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .skill {
+        position: relative;
+        float: left;
+        display: inline-block;
+    }
+
+    .skill-row {
+        @include grid-row();
+        float: left;
+        text-align: center;
+        position: relative;
+        .skill {
+            background-image: url('assets/img/shield-normal.png');
+            margin: 20px;
+            height: $skill-height;
+            width: $skill-width;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                opacity: 0.6;
+            }
+            a {
+                color: $white;
+                display: block;
+            }
+            .icon {
+                width: $skill-icon-width;
+                height: $skill-icon-height;
+                margin: $skill-icon-margin-top $skill-icon-margin-right $skill-icon-margin-bottom $skill-icon-margin-left;
+            }
+            .name {
+                font-size: .9em;
+                margin: 10px auto 8px;
+                width: 60px;
+                line-height: 12px;
+            }
+            .level {
+                width: 58px;
+                height: 30px;
+                margin: 0 auto;
+            }
+            .strength-bar {
+                width: 58px;
+                height: 30px;
+            }
+            &.lock {
+                color: $steel;
+                .icon {
+                    background: url('assets/img/icon-disable.png') no-repeat;
+                }
+            }
+            &.success {
+                background: url('assets/img/shield-success.png') no-repeat;
+                .icon {
+                    background: url('assets/img/icon-normal.png') no-repeat;
+                }
+                .strength-bar {
+                    background: url('assets/img/pw5.png') no-repeat;
+                }
+            }
+            &.unlock {
+                color: $white;
+                .icon {
+                    background: url('assets/img/icon-normal.png') no-repeat;
+                }
+                .level-1 .strength-bar {
+                    background: url('assets/img/pw1.png') no-repeat;
+                }
+                .level-2 .strength-bar {
+                    background: url('assets/img/pw2.png') no-repeat;
+                }
+                .level-3 .strength-bar {
+                    background: url('assets/img/pw3.png') no-repeat;
+                }
+                .level-4 .strength-bar {
+                    background: url('assets/img/pw4.png') no-repeat;
+                }
+            }
+        }
+        &.skill-block-2 {
+            .skill {
+                &:first-child {
+                    &:not(.skill-offset-1) {
+                        margin-left: 110px
+                    }
+                }
+            }
+            .skill-offset-1 {
+                margin-left: 250px;
+            }
+        }
+        &.skill-block-3 {
+            .skill {
+                &:not(.skill-offset-1) {
+                    &:first-child {
+                        &:not(.skill-offset-2) {
+                            margin-left: 40px;
+                        }
+                    }
+                }
+            }
+            .skill-offset-1 {
+                margin-left: 180px;
+            }
+            .skill-offset-2 {
+                margin-left: 320px;
+            }
+        }
+        &.test-out {
+            margin-top: 20px;
+            &:hover {
+                tooltip('show');
+            }
+        }
+    }
+
+    .skill-page {
+        padding-top: 40px;
+        .skill {
+            .name {
+            }
+            .icon {
+//                background: url('assets/img/big-shield-normal.png') no-repeat;
+                margin: 20px auto 40px;
+                width: 190px;
+                height: 220px;
+            }
+        }
+        .lessons {
+            .lesson {
+                float: left;
+                background-color: $white;
+                border-radius: $global-radius;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                width: 260px;
+                height: 190px;
+                &.past {
+                    i {
+                        display: inline-block;
+                    }
+                }
+                &.unlocked {
+                }
+                &.locked {
+                    background-color: $smoke;
+                    i.icon-lock {
+                        display: inline-block;
+                    }
+                }
+                h4.name {
+                    font-weight: 700;
+                }
+                i {
+                    display: none;
+                }
+                p {
+                    font-size: .9em;
+                }
+                a.button {
+                    padding: 11px 13px;
+                }
+            }
+        }
+    }
+}

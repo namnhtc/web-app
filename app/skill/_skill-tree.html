@@ -1,0 +1,24 @@
+<div class="skill-row skill-block-{{row.length}}" ng-repeat="row in skillTree track by $index">
+  <div ng-if="!row.isCheckpoint && skill != 'null'"
+    class="{{skill.finished_lesson == skill.lessons.length ? 'success' : ''}} {{(skill.theme_color === '#99cc00' ? 'green' : (skill.theme_color === '#ff4444' ? 'red' : 'blue'))}}
+    {{skill.unlocked ? 'unlocked' : 'locked'}}
+    skill skill-{{skill.order + 1}} skill-offset-{{skill.isFirstInRow ? $index : 0}}" ng-repeat="skill in row track by $index">
+    <a ng-href="{{skill.unlocked ? '/skill/' + skill._id : ''}}">
+      <div class="icon" style="background-image: url('{{skill.unlocked ? iconSets.unlocked : iconSets.locked}}');"></div>
+      <div class="name">{{skill.slug}}</div>
+      <div class="level level-5">
+        <span ng-if="skill.finished_lesson != skill.lessons.length">{{skill.finished_lesson || 0}} / {{skill.lessons.length || 0}}</span>
+        <div ng-if="skill.finished_lesson == skill.lessons.length" class="strength-bar"></div>
+      </div>
+    </a>
+  </div>
+  <a ng-if="row.isCheckpoint && (row[0].remaining_test_times == 0)" class="disabled secondary test-out hex-memo-button">
+    <i class="icon-lock"></i>
+    {{row[0].title}}
+  </a>
+
+  <a ng-if="row.isCheckpoint && (row[0].remaining_test_times > 0)" ng-href="{{'checkpoint/' + row[0].row}}" class="secondary test-out hex-memo-button" tooltip="Làm bài kiểm tra về kiến thức của tất cả các kĩ năng phía trên để nhanh chóng vượt qua những kĩ năng đó" tooltip-placement="right">
+    <i class="icon-lock"></i>
+    {{row[0].title}}
+  </a>
+</div>

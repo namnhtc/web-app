@@ -1,0 +1,264 @@
+.new-player {
+padding-top: 10px !important;
+  .player-container {
+
+    .carousel {
+      .carousel-inner {
+        position: relative;
+        overflow: hidden;
+        > .item {
+          display: none;
+          position: relative;
+          text-align: center;
+        }
+        > .active {
+          left: 0;
+          display: block !important;
+          @include animation(fadeIn 1s);
+        }
+      }
+    }
+
+    .player-main {
+      min-height: 400px;
+      padding-bottom: 40px;
+    }
+
+    .player-carousel {
+      .player-carousel-slider {
+        list-style: outside none none;
+        min-height: 380px;
+        margin: 0 -40px;
+        position: relative;
+        > li {
+          margin: 0;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+// .header{
+//   height: 80px;
+// }
+.page-referral{
+  // height:480px;
+  background: none repeat scroll 0% 0% #FFF;
+  // padding-left: 40px !important;
+  // padding-right: 40px !important;
+  // padding-top: 20px;
+  // overflow-y: scroll;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  .student-memo{
+    background: url("assets/img/referral/bg3.png") center no-repeat;
+    margin-top: 20px;
+    .date-time-memo{
+      text-align: center;
+      margin-top:161px;
+      margin-left: 15px;
+      p{
+        background: url("assets/img/referral/bg00.png") repeat;
+        width: 320px;
+        height: 60px;
+        line-height: 1.3;
+        font-size: 14px;
+        padding-top: 12px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+    }    
+  }
+  p.user-topica-memo{
+    background: #cc4444;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+    margin: -20px auto 0;
+  }
+p.top-english {
+  background: url("assets/img/referral/bg4.png") repeat scroll 0% 0% transparent;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left:33px;
+  width: 1020px;
+  strong{
+    font-size: 40px;
+  }
+}
+  .friend-join {
+   margin-top: 20px;
+  height: 100px;
+  margin-bottom: 10px;
+    .left-friend{
+      text-align: right;
+      img{
+        width: 230px;
+      }
+    }
+    .right-friend {
+      text-align:left;
+    }
+    p{
+      font-size: 35px;
+      color: #000;
+      line-height: 43px;
+      margin-bottom: 0px;
+      strong{
+        color: #810C15;
+      }
+    }
+  }
+  .communication{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    p{
+      margin-bottom: 0;
+      color: #810c15;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    hr{
+      margin-bottom: 0;
+      margin-top: 5px;
+      height: 3px;
+      background: #810c15;
+    }
+  }
+  .native-topica{
+    margin-top: 40px;
+    .left-na-img{
+      text-align: center;
+      span{
+        color: #810c15;
+        font-size: 19px;
+        font-weight: 600;
+        margin-top: 20px;
+        display: block;
+      }
+      p{
+        text-align: left;
+        padding-left: 32px;
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: 15px;
+      }
+    }
+    .center-na-img{
+      text-align: center;
+      span{
+        color: #810c15;
+        font-size: 19px;
+        font-weight: 600;
+        margin-top: 20px;
+        display: block;
+      }
+      p{
+        text-align: left;
+        padding-left: 75px;
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: 15px;
+      }
+    }
+    .right-na-img{
+      text-align: center;
+      span{
+        color: #810c15;
+        font-size: 19px;
+        font-weight: 600;
+        margin-top: 20px;
+        display: block;
+      }
+      p{
+        text-align: left;
+        padding-left:26px;
+        color: #666;
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: 15px;
+      }
+    }
+  }
+  .topica-ads{
+    margin-top: 30px;
+    margin-top: 30px;
+    padding-left: 35px;
+    padding-right: 36px;
+    .topica-edu span{
+      color: #810C15;
+      font-weight: 600;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    p{
+      font-size: 15px;
+      color: #666;
+      margin-left: 10px;
+    }
+  }
+  .logo-funding{
+    margin-top: 10px;
+    margin-top: 10px;
+    padding-left: 33px;
+    padding-right: 33px;
+    .join-dev{
+      text-align: left;
+      margin-bottom: 40px;
+      a.button-dev{
+        color: #000;
+        font-size: 13px;
+        font-weight: 600;
+        height: 75px;
+        line-height: 75px;
+        background: #e7e3e2;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+      }
+
+    }
+    .logo-ads{
+      text-align: right;
+    }
+  }
+}
+.footer-referral-event{
+  background: #fff;
+  height:65px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  // margin-top: 22px;
+  a{
+    background: #810C15;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 15px;
+    font-size: 18px;
+    margin-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    margin-top:5px;
+    display: inline-block;
+  }  
+}
+.button-register-foter{
+  text-align: right;
+  margin-top: 5px;
+  padding-right: 15px;
+}

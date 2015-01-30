@@ -1,0 +1,26 @@
+<div class="player-carousel carousel" player-carousel>
+  <ul class="carousel-inner player-carousel-slider">
+    <li class="item" ng-class="{active:slideIndex == $index}" ng-repeat="slide in slides track by $index">
+      <img ng-src="{{slide.image_url}}" />
+    </li>
+  </ul>
+</div>
+<div class="carousel-container">
+  <ul class="carousel-dots">
+    <li class="carousel-dot" ng-class="{active:slideIndex == $index}" ng-repeat="slide in slides track by $index" ng-click="control.goToSlide($index)">
+    </li>
+  </ul>
+</div>
+<footer class="player-carousel-footer" player-carousel-footer>
+  <div class="buttons">
+    <div class="left">
+      <a class="small radius button skip {{(slideIndex < (slides.length - 1)) ? '' : 'hide-with-space'}}" ng-click="control.skip()">Bỏ qua hướng dẫn</a>
+    </div>
+    <div class="right">
+      <a ng-show="slideIndex > 0" class="small radius button previous" ng-click="control.previous()">Quay lại</a>
+      <a class="small radius button continue" ng-click="control.next()">
+        {{ slideIndex > 0 ? ((slideIndex < (slides.length - 1)) ? 'Tiếp tục' : 'Sẵn sàng học') : 'Bắt đầu' }}
+      </a>
+    </div>
+  </div>
+</footer>

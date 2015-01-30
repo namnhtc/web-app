@@ -1,0 +1,37 @@
+<section class="app">
+  <div class="setting-page">
+    <div class="main-left">
+      <div class="container">
+        <section class="setting-notification">
+          <div class="row">
+            <h3 class="title left">Ngôn ngữ</h3>
+            <a class="small radius button right save-change" ng-click="saveChanges()">Lưu thay đổi</a>
+          </div>
+          <div class="row">
+            <div class="large-10 columns large-centered">
+              <div class="row">
+                <div class="large-4 columns">
+                  Học ngôn ngữ
+                </div>
+                <div class="large-12 columns">
+                  <select ng-model="course" ng-options="course.name for course in userCourses">
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-4 columns"></div>
+                <div class="large-12 columns">
+                  <a ng-href="/course" class="small-16 secondary memo-button">Xem tất cả các khoá học ngôn ngữ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="main-right">
+      <side-nav></side-nav>
+      <app-version></app-version>
+    </div>
+  </div>
+</section>

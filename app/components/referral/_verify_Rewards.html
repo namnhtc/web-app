@@ -1,0 +1,42 @@
+<article class="verify-reward-container">
+  <div class="congrat">
+    <p>Chúc mừng bạn đã đủ điều kiện đạt được học bổng <b>{{rewards_info.gift_value}},000 VNĐ</b> từ <b>Topica Memo</b></p>
+    <p>Code xác minh học bổng của bạn là <b>{{rewards_info.rewards_verification_code}}</b></p>
+  </div>
+  <div class="guide">
+    <span>Cách 1:</span>
+    <div>
+      <p>Hãy gửi tin nhắn xác minh theo cú pháp dưới sau:</p>
+    </div>
+    <div class="sms-guide" style="margin-bottom: 20px">
+      <i class="icon-phone"></i>
+      <p><b>{{rewards_info.rewards_verification_code}} HọTên SốChứngMinhND</b></p>
+      <p>tới số điện thoại <span class="text-bold">0972 865 329</span></p>
+      <p style="font-size:0.8em;font-style:italic;">(300 vnđ/sms)</p>
+      <i class="icon-message"></i>
+    </div>
+    <span>Cách 2:</span>
+    <div class="row">
+      <p>Bạn vui lòng điền số điện thoại tại đây:</p>
+    </div>
+    <div class="row" style="margin:0;">
+      <div class="large-12 columns">
+        <input ng-show="success == ''" type="text" class="radius" ng-model="user.mobile" placeholder="Nhập số điện thoại" style="margin: 5px 0 0;"/>
+        <input ng-show="success != ''" type="text" class="radius" ng-model="user.mobile" placeholder="Nhập số điện thoại" style="margin: 5px 0 0;" disabled />
+        <p ng-show="success != ''" class="text-center"><b>{{success}}</b></p>
+      </div>
+      <div class="large-4 columns">
+        <a ng-show="success == ''" class="small radius button expand" ng-click="verifyMobile()" style="margin:0;padding-top:9px;padding-bottom:9px;margin-top:4px;">Gửi</a>
+        <a ng-show="success != ''" class="small radius button expand" ng-click="close()" style="margin:0;padding-top:9px;padding-bottom:9px;margin-top:4px;">Tiếp tục</a>
+      </div>
+      <div class="large-16 columns text-center" ng-show="error != ''">
+        <p style="font-size:14px;color:#810c15;font-style:italic;" ng-binding="error"></p>
+      </div>
+      <div class="large-16 columns">
+        <p>Chúng tôi sẽ chủ động liên lạc với bạn trong thời gian sớm nhất để xác minh thông tin học bổng.<br />
+        <b>Mời thêm nhiều bạn bè sẽ giúp bạn đạt được học bổng lớn hơn.</b>
+        </p>
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,89 @@
+.player .question {
+    .judge {
+  .content {
+  }
+  .answers {
+      .answer {
+    width: 100%;
+    float: left;
+    label {
+        width: 100%;
+        min-height: 40px;
+
+        border-radius: $global-radius;
+        border: 1px solid $smoke;
+        box-shadow: 0 0 0 1px $gainsboro;
+
+        float: left;
+        padding: 7px 10px;
+        margin-bottom: 20px;
+        transition: all 0.2s ease-in-out 0;
+    }
+
+      }
+      input[type=checkbox] {
+    display: none;
+
+    &:checked + label {
+        background: $primary-color;
+        border: none;
+        color: $white;
+        span.box {
+      background: $white;
+      color: $primary-color;
+      padding: 1px 1px 1px 3px;
+      margin-top: 2px;
+      line-height: 1rem;
+        }
+    }
+    &:checked + label:after {
+        opacity: 1;
+    }
+      }
+
+      span.box {
+    border: 1px solid #ccc;
+    color: $white;
+    display: inline-block;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+      }
+  }
+    }
+}
+
+.hover-button-text:hover .hover-text{
+  display: inline-block;
+  background: none repeat scroll 0% 0% #333;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-top: 5px;
+}
+.hover-button-text .hover-text p{
+  margin: 0;
+}
+.answer:hover .hover-text{
+  display: block;
+background: none repeat scroll 0% 0% #333;
+color: #FFF;
+border-radius: 5px;
+padding: 0px 15px;
+height: 45px;
+margin-left: 8px;
+width: 301px;
+margin-bottom: 10px;
+margin-top: 50px;
+}
+.answer .hover-text p{
+  line-height: 14px;
+}
+.joyride-tip-guide{
+  width: 230px !important;
+  height: 60px !important;
+  border-radius: 5px;
+}
+.joyride-content-wrapper{
+  padding-top: 12px !important;  
+}

@@ -1,0 +1,89 @@
+.home-page, .plaza {
+  &.main {
+    margin-top: 40px;
+    .main-left, .main-right {
+      @include grid-column($columns: 4);
+    }
+    .main-center {
+      @include grid-column($columns: 8);
+    }
+    .main-left, .main-center, .main-right {
+      min-height: 580px;
+      .container {
+        background-color: $white;
+        border-radius: 15px;
+        padding: 20px;
+      }
+      .share {
+        background: url("assets/img/facebook-share.png") center no-repeat;
+        width: 110px;
+        height: 40px;
+      }
+    }
+    .container {
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: auto;
+        padding-right: auto;
+      }
+    }
+    .main-center .container {
+      float: left;
+      width: 100%;
+      h4 {
+        line-height: 60px;
+        margin: 0;
+        padding-left: 20px;
+      }
+      .fanto-store {
+        height: 40px;
+        line-height: 40px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+    }
+    .main-right {
+      .container {
+        .facebook-search, .memo-search, .email-invitation {
+          height: 40px;
+          line-height: 40px;
+          padding: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .social-bar {
+        margin-top: 10px;
+        padding: 5px;
+        li {
+          background-color: $white;
+          border-radius: 10px;
+          width: 80px;
+          margin-left: 5px;
+          margin-right: 5px;
+          min-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.panel {
+  border: medium none !important;
+  width: 1110px !important;
+  margin: 0px auto;
+  border-radius: 12px;
+  margin-top: 25px;
+  padding: 5px;
+}
+
+.panel a > img {
+  height: 25px;
+  width: 25px;
+  text-align: right;
+  float: right;
+}
+
+@import "placement-test-modal";

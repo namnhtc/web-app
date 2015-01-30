@@ -1,0 +1,8 @@
+div.question {
+  background-color: $white;
+  .question-inner {
+    @include grid-column($columns: 12, $center: true);
+    min-height: 400px;
+    padding-top: 20px;
+  }
+}

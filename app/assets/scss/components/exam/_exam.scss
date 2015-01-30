@@ -1,0 +1,17 @@
+.player {
+    margin-top: 40px;
+    .container {
+	@include grid-column($columns: 16);
+	header, div.question, footer {
+	    @include grid-row();
+	}
+    }
+}
+
+@import
+    "header",
+    "progress-bar",
+    "hearts",
+    "question",
+    "footer",
+    "buttons";

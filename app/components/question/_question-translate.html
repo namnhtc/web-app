@@ -1,0 +1,33 @@
+<div class="question-inner">
+  <div class="small-12 small-centered columns translate question">
+    <div class="row">
+      <h4 class="name">Dịch nội dung này</h4>
+    </div>
+    <div class="row">
+      <div class="small-7 columns text-to-translate">
+        <div class="row">
+          <div class="small-3 columns" ng-if="translate.normal_question_audio">
+            <span class="speaker" ng-click="speaker.play()"></span>
+          </div>
+          <div class="small-13 columns">
+            <bdi>
+            <span class="text" ng-repeat="token in translate_tokens track by $index">
+              <span class="token" ng-if="token.isObjective || token.isSpecialObjective" dropdown-toggle="#token-dropdown-{{$index}}" ng-mouseover="showDefinitionDropdown(event=$event)" ng-mouseout="closeDefinitionDropdown(event=$event)" data-sound="{{token.sound}}" data-word-id="{{token._id}}" ng-class='{"objective": token.isObjective, "special-objective": token.isSpecialObjective}'>{{token.text}}</span>
+              <ul id="token-dropdown-{{$index}}" class="f-dropdown dropdown-definition">
+                <li ng-repeat="def in token.definitions" class="definition">{{def}}</li>
+              </ul>
+              <span class="token" ng-if="!(token.isObjective || token.isSpecialObjective)">{{token.text}}</span>
+            </span>
+            </bdi>
+          </div>
+        </div>
+      </div>
+      <div class="small-1 columns">
+        <h2 class="icon-arrow-right"></h2>
+      </div>
+      <div class="small-7 columns answer">
+        <textarea class="translate-area" ng-model="answer"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

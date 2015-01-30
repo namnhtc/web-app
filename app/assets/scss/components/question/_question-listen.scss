@@ -1,0 +1,41 @@
+.player .question {
+    .listen {
+	h4.name {
+            margin-bottom: 40px;
+	}
+	.buttons {
+            position: relative;
+            height: 110px;
+            > span {
+		cursor: pointer;
+            }
+            .speaker {
+		background: url('assets/img/lesson-speaker.png') no-repeat;
+		display: block;
+		position: absolute;
+		width: 95px;
+		height: 95px;
+		top: 0;
+            }
+            .slow-speaker {
+		background: url('assets/img/lesson-speaker-slow.png') no-repeat;
+		display: block;
+		position: absolute;
+		width: 55px;
+		height: 55px;
+		top: 56px;
+		left: 100px;
+            }
+	}
+	.answer {
+            padding-top: 66px;
+            input[type="text"] {
+		border: 1px solid $gainsboro;
+		border-radius: 10px;
+		height: 40px;
+		padding-left: 10px;
+		vertical-align: middle;
+            }
+	}
+    }
+}

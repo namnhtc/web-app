@@ -1,0 +1,23 @@
+<a dropdown-toggle="#dropdown-notification" class="button">
+  <img src="assets/img/button-03.png" style="width:30px;"/>
+  <div class="indicator" ng-class="{'has-notification': notification.is_new_count > 0}">{{notification.is_new_count}}</div>
+</a>
+<div id="dropdown-notification" class="f-dropdown" show-on-click="true">
+  <div class="dropdown-notification-inner">
+    <ul class="noti-list">
+      <li class="noti-item" ng-class="{'hide': notification.notifications.length > 0}">
+        <div class="noti-item-inner" noti-id="{{noti._id}}">
+          <div class="noti-item-content">Bạn không có thông báo nào</div>
+        </div>
+      </li>
+      <li class="noti-item" ng-repeat="noti in notification.notifications" ng-switch="noti.type">
+        <notification-event-alert-item ng-switch-when="event_alert" content="{{noti.content}}" time-ago="noti.time_ago"></notification-event-alert-item>
+        <notification-ref-code-submitted-item ng-switch-when="ref_code_submitted" noti-id="{{noti._id}}" content="{{noti.content}}" friend="noti.metadata.submitted_user" time-ago="noti.time_ago"></notification-ref-code-submitted-item>
+        <notification-new-tier ng-switch-when="achieved_new_tier" content="{{noti.content}}" gift="{{noti.metadata}}" time-ago="noti.time_ago"></notification-new-tier>
+        <notification-pass-item ng-switch-when="someone_pass_you" content="{{noti.content}}" friend="noti.metadata.friend" time-ago="noti.time_ago"></notification-pass-item>
+        <notification-subscribe-item ng-switch-when="someone_subscribe" noti-id="{{noti._id}}" content="{{noti.content}}" friend="noti.metadata.friend" time-ago="noti.time_ago"></notification-subscribe-item>
+        <notification-dropdown-item ng-switch-default></notification-dropdown-item>
+      </li>
+    </ul>
+  </div>
+</div>

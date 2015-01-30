@@ -1,0 +1,231 @@
+.profile {
+  .avatar {
+    background-color: $iron;
+    border-radius: 50%;
+    &.big {
+      height: 120px;
+      width: 120px;
+    }
+    &.small {
+      height: 60px;
+      width: 60px;
+      padding: 0;
+    }
+  }
+  .memo-progress {
+    position: relative;
+    min-height: 40px;
+    margin: 14px 0;
+    .current-level, .next-level {
+      font-size: .9em;
+      line-height: 40px;
+      position: absolute;
+      width: 40px;
+      z-index: 1;
+    }
+    .current-level {
+      background-color: $gold;
+      border-radius: 50%;
+      color: $white;
+      text-align: center;
+      left: 0;
+    }
+    .padder {
+      background-color: #ffe79d;
+      height: 20px;
+      margin-top: 10px;
+      position: relative;
+      left: 20px;
+      width: 160px;
+      .bar {
+        background-color: $gold;
+        height: 20px;
+        width: 0;
+      }
+    }
+    .next-level {
+      background: url("assets/img/icon-system-01.png") no-repeat -40px -30px;
+      line-height: 40px;
+      right: 0px;
+      top: 0;
+      padding-left: 5px;
+      z-index: 1;
+    }
+  }
+  &.profile-embed, &.profile-page {
+    .username {
+      h4 {
+        line-height: 60px;
+        width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+      }
+    }
+    .fullname, .location {
+      margin-top: 15px;
+      width: 140px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .streak, .memos, .exp, .known-words {
+      padding: 0;
+      .icon, .text {
+        display: inline-block;
+        float: left;
+        line-height: 30px;
+      }
+      .icon {
+        background: url("assets/img/icon-system-01.png") no-repeat;
+        margin-right: 5px;
+      }
+    }
+    .streak {
+      .icon {
+        background-position: -26px 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .memos {
+      padding: 0;
+      .icon {
+        background-position: 0 0;
+        width: 26px;
+        height: 30px;
+      }
+    }
+    .exp {
+      .icon {
+        background-position: -56px 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .known-words {
+      .icon {
+        background-position: -86px 0;
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  &.profile-page {
+    .username {
+      margin: 20px auto;
+      h3 {
+        padding-left: 0;
+      }
+    }
+    .name, .location, .level, .streak {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .connection-fb {
+    margin-top: 15px !important;
+    line-height: 55px;
+  }
+  .connection-google {
+    padding-left: 0;
+  }
+  .facebook.button {
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    text-align: center;
+    padding: 0;
+  }
+  .google.button {
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    text-align: center;
+    padding: 0;
+  }
+  .img-avatar {
+    margin-top: 30px;
+  }
+  .save-change {
+    height: 40px;
+    line-height: 40px;
+    width: 146px;
+    padding: 0 20px !important;
+    text-align: center !important;
+  }
+  .large-center {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  a.reverse span {
+    width: 190px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+
+/*------------------------------PROFILE---------------------------------------*/
+.left-profile{
+  width: 75% !important;
+}
+.leaderboard-profile{
+  float: right !important;
+}
+.user-info-profile {
+ text-align: center;
+ margin-top: 20px;
+}
+.user-info-profile p {
+  margin-bottom: 10px;
+   img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+ }
+  strong{
+    color: #666;
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+.add-user-name{
+  margin-bottom: 20px;
+  p{
+  display: inline-block;
+  color: #666;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 0;
+  img{
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  }
+}
+.choose-language-profile {
+  margin-top: 30px !important;
+}
+.language-profile {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.language-profile img{
+  float: left;
+  margin-right: 10px;
+}
+.language-profile a {
+  color: #810c15;
+  font-weight: 600;
+  font-size: 14px;
+}
+.language-profile{
+  font-size: 15px;
+  color: rgb(102, 102, 102);
+  display: inline-block;
+  width: 20%;
+  margin-left: 20px;
+}
+/*----------------------------------------------------------------------------------*/

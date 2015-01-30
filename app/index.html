@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Topica Memo</title>
+  <meta name="description" content="Trải nghiệm hình thức học mới lạ, tranh tài cùng bạn bè. 55 chủ đề, 286 bài học, 1595 từ chuyên đề và 11694 câu, chinh phục tiếng Anh chỉ với 5 phút mỗi ngày!" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta property="og:url" content="http://memo.edu.vn/?code_chanel=ShareFB&id_landingpage=2&id_campaign=1&id=199">
+  <meta property="og:title" content="TOPICA Memo - Học tiếng Anh miễn phí trọn đời!">
+  <meta property="og:description" content="Trải nghiệm hình thức học mới lạ, tranh tài cùng bạn bè. 55 chủ đề, 286 bài học, 1595 từ chuyên đề và 11694 câu, chinh phục tiếng Anh chỉ với 5 phút mỗi ngày!">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://memo.edu.vn/assets/img/MM0028.png">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="486" />
+  <meta property="og:image:height" content="255" />
+  <link href="assets/img/appicon.png" sizes="64x64" type="image/png" rel="icon" id="favicon">
+  <base href="/">
+  <link rel="stylesheet" href="vendors/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="vendors/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="vendors/angular-loading-bar/src/loading-bar.css">
+  <link rel="stylesheet" href="app.css"/>
+  <script src="vendors/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body ng-class="{landingpage: !auth.loggedIn}" ng-controller="AppCtrl">
+  <div id="fb-root"></div>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N6X84R"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N6X84R');</script>
+  <!-- End Google Tag Manager -->
+
+  <header ng-if="auth.loggedIn || auth.trial" app-header></header>
+  <header ng-if="!auth.loggedIn" class="fixed contain-to-grid" landing-header></header>
+  <div ng-view></div>
+  <footer app-footer></footer>
+
+  <script src="vendors/angular/angular.min.js"></script>
+  <script src="vendors/angular-cookies/angular-cookies.min.js"></script>
+  <script src="vendors/angular-animate/angular-animate.min.js"></script>
+  <script src="vendors/angular-route/angular-route.js"></script>
+  <script src="vendors/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="vendors/angular-foundation/dist/mm-foundation-tpls-0.6.0-SNAPSHOT.min.js"></script>
+  <script src="vendors/angular-google-plus/dist/angular-google-plus.min.js"></script>
+  <script src="vendors/angular-facebook/lib/angular-facebook.js"></script>
+  <script src="vendors/angular-audio/angular.audio.js"></script>
+  <script src="vendors/angles/app/vendors/chartjs/Chart.js"></script>
+  <script src="vendors/angles/angles.js"></script>
+  <script src="vendors/ngStorage/ngStorage.min.js"></script>
+  <script src="vendors/angular-loading-bar/build/loading-bar.min.js"></script>
+  <script src="vendors/google-diff-match-patch/diff_match_patch.js"></script>
+  <script src="vendors/moment/moment.js"></script>
+  <script src="vendors/angular-moment/angular-moment.min.js"></script>
+  <script src="vendors/moment/locale/vi.js"></script>
+  <!-- App -->
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <script src="directives.js"></script>
+  <script src="services.js"></script>
+  <!-- Landing page -->
+  <script src="components/landingpage/landingpage.js"></script>
+  <script src="components/landingpage/controllers.js"></script>
+  <script src="components/landingpage/directives.js"></script>
+  <script src="components/landingpage/services.js"></script>
+  <script src="components/landingpage/header/header.js"></script>
+  <!-- Mixpanel -->
+  <script src="components/tracking/tracking.js"></script>
+  <script src="components/tracking/services.js"></script>
+  <!-- Header -->
+  <script src="components/header/header.js"></script>
+  <!-- Home -->
+  <script src="home/home.js"></script>
+  <script src="home/controller.js"></script>
+  <script src="home/directives.js"></script>
+  <!-- Login -->
+  <script src="login/login.js"></script>
+  <script src="components/login/services.js"></script>
+  <!-- Course -->
+  <script src="course/course.js"></script>
+  <script src="course/controllers.js"></script>
+  <script src="course/directives.js"></script>
+  <script src="components/course/services.js"></script>
+  <!-- Profile -->
+  <script src="profile/profile.js"></script>
+  <script src="components/profile/services.js"></script>
+  <!-- Leaderboard -->
+  <script src="leaderboard/leaderboard.js"></script>
+  <script src="leaderboard/controllers.js"></script>
+  <script src="components/leaderboard/directives.js"></script>
+  <script src="components/leaderboard/services.js"></script>
+  <!-- Skill -->
+  <script src="skill/skill.js"></script>
+  <script src="skill/controllers.js"></script>
+  <script src="components/skill/services.js"></script>
+  <script src="components/skill/directives.js"></script>
+  <script src="components/skill/tree.js"></script>
+  <!-- Placement Test -->
+  <script src="placement/placement.js"></script>
+  <script src="placement/controllers.js"></script>
+  <script src="components/placement/services.js"></script>
+  <script src="components/placement/directives.js"></script>
+  <!-- Exam -->
+  <script src="exam/exam.js"></script>
+  <script src="exam/controllers.js"></script>
+  <script src="components/exam/services.js"></script>
+  <!-- Question -->
+  <script src="components/question/question.js"></script>
+  <script src="components/question/services.js"></script>
+  <script src="components/question/listen.js"></script>
+  <script src="components/question/judge.js"></script>
+  <script src="components/question/form.js"></script>
+  <script src="components/question/name.js"></script>
+  <script src="components/question/select.js"></script>
+  <script src="components/question/translate.js"></script>
+  <script src="components/question/speak.js"></script>
+  <!-- Report -->
+  <script src="components/report/report.js"></script>
+  <!-- Feeback -->
+  <script src="components/feedback/feedback.js"></script>
+  <script src="components/feedback/services.js"></script>
+  <script src="components/feedback/report_modal.js"></script>
+  <!-- DMP -->
+  <script src="components/dmp/dmp.js"></script>
+  <!-- Setting -->
+  <script src="settings/settings.js"></script>
+  <script src="settings/account.js"></script>
+  <script src="settings/sidebar.js"></script>
+  <script src="settings/notification.js"></script>
+  <script src="settings/profile.js"></script>
+  <script src="settings/languages.js"></script>
+  <!-- Plaza -->
+  <script src="plaza/plaza.js"></script>
+  <script src="plaza/controllers.js"></script>
+  <script src="components/plaza/services.js"></script>
+  <!-- Gamification -->
+  <script src="components/gamification/gamification.js"></script>
+  <script src="components/gamification/sound.js"></script>
+  <!-- Message -->
+  <script src="components/message/directives.js"></script>
+  <!-- Notification -->
+  <script src="components/notification/notification.js"></script>
+  <script src="components/notification/subscribe/subscribe.js"></script>
+  <script src="components/notification/pass/pass.js"></script>
+  <script src="components/notification/referral/newTier.js"></script>
+  <script src="components/notification/referral/refCodeSubmitted.js"></script>
+  <script src="components/notification/referral/eventAlert.js"></script>
+  <!-- Welcome -->
+  <script src="welcome/welcome.js"></script>
+  <!-- Words -->
+  <script src="components/words/words.js"></script>
+  <!-- Referral -->
+  <script src="components/referral/services.js"></script>
+  <script src="components/referral/controllers.js"></script>
+  <script src="components/referral/directives.js"></script>
+  <script src="components/referral/verifyReward/verifyReward.js"></script>
+  <script src="components/referral/referral.js"></script>
+  <!-- Downloads -->
+  <script src="downloads/downloads.js"></script>
+
+  <script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+  var fbds = document.createElement('script');
+  fbds.async = true;
+  fbds.src = '//connect.facebook.net/en_US/fbds.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(fbds, s);
+  _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1404938006436088']);
+  })();
+  window._fbq = window._fbq || [];
+  window._fbq.push(['track', 'PixelInitialized', {}]);
+  </script>
+  <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1404938006436088&amp;ev=PixelInitialized" /></noscript>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-57229832-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

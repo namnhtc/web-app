@@ -1,0 +1,35 @@
+<div class="fixed contain-to-grid app-top-bar">
+  <top-bar>
+    <ul class="columns small-5 title-area">
+      <li class="name">
+       <a href="/">
+          <img src="assets/img/logo-beta-web.png" />
+          <span class="version">v1.0.2</span>
+        </a>
+      </li>
+    </ul>
+    <top-bar-section ng-if="auth.loggedIn">
+      <!-- Left Nav Section -->
+      <ul class="left menus">
+        <li class="menu-item" ng-class="{'active': path == '/'}" style="width: 130px;">
+          <a ng-href="/">Trang chủ</a>
+        </li>
+      </ul>
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-form notification" notification-dropdown-button></li>
+        <li class="has-form setting">
+          <a dropdown-toggle="#dropdown-setting" class="button">
+            <img src="assets/img/button-05.png" alt="" />
+          </a>
+          <ul id="dropdown-setting" class="f-dropdown" dropdown-align="right">
+            <li><a href="/profile">Hồ sơ cá nhân</a></li>
+            <li><a href="/setting/account">Cài đặt</a></li>
+            <li><a ng-click="showShortcutPopup()">Phím tắt bàn phím</a></li>
+            <li><a ng-click="logout()">Đăng xuất</a></li>
+          </ul>
+        </li>
+      </ul>
+    </top-bar-section>
+  </top-bar>
+</div>

@@ -1,0 +1,38 @@
+<div class="submit-code-modal-inner">
+  <div class="row">
+    <div class="submit-code-modal-header">
+      <h5>HỌC BỔNG ĐÓN XUÂN</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-16 columns">
+      <p class="submit-code-modal-cta">
+      Bạn vui lòng nhập code chia sẻ <br /> của bạn bè TẠI ĐÂY (nếu không thì bỏ qua).
+      </p>
+    </div>
+  </div>
+  <div class="row" ng-show="error">
+    <div class="large-16 columns">
+      <p class="submit-code-modal-error">{{error}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-16 columns">
+      <input type="text" ng-hide="referral.hasCode" class="radius expand" ng-model="referral.code" placeholder="Nhập code" />
+      <p ng-show="referral.hasCode" class="submit-code-modal-notice text-center">Chúc mừng bạn đã nhập code chia sẻ thành công từ <b ng-bind="referral.username"></b>!</p>
+    </div>
+  </div>
+  <div class="row" ng-hide="referral.hasCode">
+    <div class="large-8 columns">
+      <a class="expand radius button" ng-click="submitCode()">Đồng ý</a>
+    </div>
+    <div class="large-8 columns">
+      <a class="button-grey" ng-click="close()">Bỏ qua</a>
+    </div>
+  </div>
+  <div class="row" ng-show="referral.hasCode">
+    <div class="large-16 columns">
+      <a class="expand radius button" ng-click="close()">Tiếp tục</a>
+    </div>
+  </div>
+</div>

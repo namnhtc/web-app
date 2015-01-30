@@ -1,0 +1,47 @@
+<section class="app new-player">
+  <div class="player-inner content-event" status>
+    <div ng-switch on="directive">
+      <div ng-switch-default="referral-body-one">
+        
+      </div>
+      <div ng-switch-when="referral-body-two">
+        <div class="row top-screen-2" >
+          <p class="topicanative">TOPICA NATIVE LÀ GÌ ?</p>
+        </div>
+      </div>
+      <div ng-switch-when="referral-body-three">
+        <div class="row top-screen-2" >
+          <p class="topicanative"><b>HƯỚNG DẪN THAM DỰ</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="page-referral" referral-body>
+    </div>
+    <div class="footer-referral-event" referral-footer>
+      <div class="row">
+        <div class="large-16 columns button-register-foter" ng-switch on="directive">
+          <div ng-switch-default="referral-body-one">
+            <!-- <a title="" ng-click="control.last()">Tham gia ngay</a> -->
+            <a title="" ng-click="control.next()">Tìm hiểu về Topica Native</a>
+          </div>
+          <div ng-switch-when="referral-body-two">
+            <a title="" ng-click="control.prev()" class="button-screen-2-bottom-left ng-scope small-16 columns radius disabled" style="margin-right: 0px">Quay lại
+            </a>
+            <a title="" ng-click="control.next()" class="button-screen-2-bottom-right ng-scope small-16 columns radius" style="margin-right: 0px">Tham gia ngay
+            </a>
+            <!-- <div class="slide-animate" ng-include src="'components/referral/_step_two.html'"></div> -->
+          </div>
+          <div ng-switch-when="referral-body-three">
+            <!-- <div class="slide-animate" ng-include src="'components/referral/_step_three.html'"></div> -->
+            <a title="" ng-click="control.prev()" class="button-screen-2-bottom-left ng-scope small-16 columns radius disabled" style="margin-right: 0px">Quay lại
+            </a>
+            <a title="" ng-controller="LoginModalCtrl" ng-click="open()" class="button-screen-2-bottom-right ng-scope small-16 columns radius right" style="margin-right: 0px" ng-class="{hide: isAuthed}">Bắt đầu tham dự
+            </a>
+            <a title="" ng-click="control.gotoProfile()" class="button-screen-2-bottom-right-big ng-scope small-16 columns radius right" style="margin-right: 0px" ng-class="{hide: !isAuthed}">Tham gia Học bổng đón xuân
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

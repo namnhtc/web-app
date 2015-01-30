@@ -1,0 +1,47 @@
+.placement-test-modal {
+  width: 840px;
+  min-height: 370px !important;
+  padding-top: 0;
+  top: 210px !important;
+  position: fixed;
+  outline: none;
+  h3, p {
+    text-align: center;
+  }
+  h3.title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .ant {
+    background: url('assets/img/login-ant.png') no-repeat;
+    display: block;
+    position: absolute;
+    width: 126px;
+    height: 147px;
+    top: -140px;
+    left: 50%;
+    z-index: 1;
+  }
+  .skills {
+    margin-top: 25px;
+    margin-left: 15px;
+    float: left;
+    .skill-row {
+      .skill-text {
+        float: left;
+        width: 200px;
+        padding-left: 10px;
+        p {
+          text-align: left;
+        } 
+        .question {
+          font-weight: 700;
+          color: #333;
+        }
+        .hook {
+          color: #666;
+        }
+      }
+    }
+  }
+}

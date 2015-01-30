@@ -1,0 +1,57 @@
+<section class="app">
+  <div class="row player lesson-page">
+    <div class="container">
+      <header>
+        <div class="small-4 columns text-center track" ng-if="questionTpl != 'questionFailure' && questionTpl != 'questionSuccess'">
+          <div class="row">
+            <div class="small-8 columns">
+              <a ng-if="examType == 'checkpoint'" href="" ng-click="quit(false, '/')">Thoát</a>
+              <a ng-if="examType != 'checkpoint'" href="" ng-click="quit(false, '/skill')">Thoát</a>
+            </div>
+            <div class="small-8 columns">
+              {{answered || 0}} / {{questions.length || 0}}
+            </div>
+          </div>
+        </div>
+        <div class="small-8 columns" ng-if="questionTpl != 'questionFailure' && questionTpl != 'questionSuccess'">
+          <div class="distinct progress question-{{questions.length}}" >
+            <span class="ant jump-{{ant}}"></span>
+            <span class="done meter" ng-repeat="i in getNumber(answered) track by $index">
+            </span>
+            <span class="nothing meter" ng-repeat="j in getNumber(questions.length - answered) track by $index">
+            </span>
+          </div>
+        </div>
+        <div class="small-4 columns" ng-if="questionTpl != 'questionFailure' && questionTpl != 'questionSuccess'">
+          <div class="row">
+            <div class="small-5 columns inventory">
+              <span class="item" ng-repeat="(key, val) in availableItems">
+              <img ng-src="assets/img/{{key}}.png" style="width:25px;height:35px;" ng-click="useItem(key)" />
+              </span>
+            </div>
+            <div class="small-11 columns hearts">
+              <span class="heart" ng-repeat="x in getNumber(hearts.remaining) track by $index"></span>
+              <span class="lost heart" ng-repeat="y in getNumber(hearts.lost) track by $index"></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="question" tabindex="0" ng-keyup="keyUpHandler(event=$event)">
+        <question-form ng-if="questionTpl == 'questionForm'"></question-form>
+        <question-judge ng-if="questionTpl == 'questionJudge'"></question-judge>
+        <question-listen ng-if="questionTpl == 'questionListen'" answer="question.userAnswer"></question-listen>
+        <question-name ng-if="questionTpl == 'questionName'" answer="question.userAnswer"></question-name>
+        <question-select ng-if="questionTpl == 'questionSelect'" answer="question.userAnswer"></question-select>
+        <question-translate ng-if="questionTpl == 'questionTranslate'" answer="question.userAnswer"></question-translate>
+        <question-failure ng-if="questionTpl == 'questionFailure'" answer="question.userAnswer"></question-failure>
+        <question-success ng-if="questionTpl == 'questionSuccess'" answer="question.userAnswer"></question-success>
+      </div>
+      <footer>
+      <footer-question ng-if="footerTpl == 'footer'"></footer-question>
+    <footer-failure ng-if="footerTpl == 'footerFailure'"></footer-failure>
+  <footer-success ng-if="footerTpl == 'footerSuccess'"></footer-success>
+<footer-result ng-if="footerTpl == 'footerResult'"></footer-result>
+</footer>
+</div>
+</div>
+</section>

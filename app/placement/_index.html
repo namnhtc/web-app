@@ -1,0 +1,34 @@
+<section class="app">
+<div class="row player placement-test">
+  <section class="container">
+    <header ng-if="questionTpl != 'questionFailure' && questionTpl != 'questionSuccess'">
+      <div class="small-4 columns text-center track">
+        <div class="row">
+          <div class="small-8 columns">
+            <a href="" ng-click="quit()">Thoát</a>
+          </div>
+          <div class="small-8 columns">
+            {{num_questions || 0}} / {{total_num_questions || 0}}
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="question" ng-keyup="keyUpHandler(event=$event)">
+      <question-form ng-if="questionTpl == 'questionForm'"></question-form>
+      <question-judge ng-if="questionTpl == 'questionJudge'"></question-judge>
+      <question-listen ng-if="questionTpl == 'questionListen'" answer="question.userAnswer"></question-listen>
+      <question-name ng-if="questionTpl == 'questionName'" answer="question.userAnswer"></question-name>
+      <question-select ng-if="questionTpl == 'questionSelect'" answer="question.userAnswer"></question-select>
+      <question-translate ng-if="questionTpl == 'questionTranslate'" answer="question.userAnswer"></question-translate>
+      <question-failure ng-if="questionTpl == 'questionFailure'" answer="question.userAnswer"></question-failure>
+      <question-success ng-if="questionTpl == 'questionSuccess'" answer="question.userAnswer"></question-success>
+    </div>
+    <footer>
+      <footer-question ng-if="footerTpl == 'footer'"></footer-question>
+      <footer-failure ng-if="footerTpl == 'footerFailure'"></footer-failure>
+      <footer-success ng-if="footerTpl == 'footerSuccess'"></footer-success>
+      <footer-result ng-if="footerTpl == 'footerResult'"></footer-result>
+    </footer>
+</section>
+</div>
+</section>

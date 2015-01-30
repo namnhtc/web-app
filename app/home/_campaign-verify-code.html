@@ -1,0 +1,19 @@
+<section class="verify-box">
+  <div class="verify-box-inner">
+    <div class="verify-box-code" ng-show="isReferral == ''">
+      <p>Nhập code từ bạn bè:</p>
+      <div class="row collapse">
+        <div class="large-13 columns">
+          <input type="text" name="" value="" placeholder="" ng-model='refCode' />          
+        </div>
+        <div class="large-3 columns">
+          <a title="" class="verify-button postfix" ng-click='submitCode()'><img src="assets/img/referral/arrow.png" alt=""></a>    
+        </div>
+      </div>
+      <p class="verify-box-error" style="color: #810c15;font-size: 12px">{{error}}</p>
+    </div>
+    <div class="verify-box-code has-code" ng-show="isReferral != ''">
+      <p>Bạn đã nhập code của <span class="">{{userName}} </span>!</p>
+    </div>
+  </div>
+</section>

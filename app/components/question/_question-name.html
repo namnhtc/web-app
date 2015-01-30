@@ -1,0 +1,25 @@
+<div class="question-inner">
+  <div class="small-12 small-centered columns name">
+    <div class="row">
+      <h4 class="name">Dịch "{{question.question}}"</h4>
+    </div>
+    <div class="row">
+      <div class="small-8 columns content">
+        <div class="image image-1">
+          <img ng-src="{{question.question_images[0]}}" />
+        </div>
+        <div class="image image-2">
+          <img ng-src="{{question.question_images[1]}}" />
+        </div>
+        <div class="image image-3">
+          <img ng-src="{{question.question_images[2]}}" />
+        </div>
+      </div>
+      <div class="small-7 columns answers">
+        <div class="row postfix-round">
+          <input type="text" class="radius answer" ng-model="answer" id="answer-1" placeholder="Đáp án ..."/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

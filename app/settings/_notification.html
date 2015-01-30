@@ -1,0 +1,32 @@
+<section class="app">
+  <div class="setting-page">
+    <div class="main-left">
+      <div class="container">
+	<section class="setting-notification">
+	  <div class="row">
+	    <h3 class="title left">Thông báo</h3>
+	    <a class="small radius button right save-change" ng-click="saveChanges()">Lưu thay đổi</a>
+	  </div>
+	  <div class="row">
+	    <div class="large-12 columns large-centered">
+	      <div class="row" ng-repeat="setting in settings track by $index">
+		<div class="large-5 columns">{{$index == 0 ? 'Gửi mail cho tôi khi' : ''}}</div>
+		<div class="large-11 columns">
+		  <input type="checkbox" ng-model="setting.email_notification_enabled" id="{{setting._id}}" />
+		  <label for="{{setting._id}}">
+		    <span class="box icon-checkmark"></span>
+		    {{setting.notification_title}}
+		  </label>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+      </div>
+    </div>
+    <div class="main-right">
+      <side-nav></side-nav>
+      <app-version></app-version>
+    </div>
+  </div>
+</section>

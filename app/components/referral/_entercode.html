@@ -1,0 +1,105 @@
+<section class="app new-player">
+  <div class="player-inner entercode" referral-entercode-ctrl>
+  <div class="row">
+    <div class="large-8 columns left-slider">
+      <span>HƯỚNG DẪN THAM DỰ</span>
+      <div class="slider-entercode">
+        <div class="all-slider">
+        <div class="arrow-of-slider">
+          <div class="arrow-pre-slider"><a ng-click="slide.prev()"><img src="assets/img/referral/arrow_pre.png"></a></div>
+          <div class="slide">
+            <div class="slide-img"><img src="{{image}}" alt=""/></div>
+            <div class="text header-slider text-memo"><p><b>{{text}}</b></p></div>
+          </div>
+          <div class="arrow-next-slider"><a ng-click="slide.next()"><img src="assets/img/referral/arrow_next.png"></a></div>
+        </div>
+        <div class="button-of-slider" style="margin-top: 135px;">
+          <div ng-repeat="item in images track by $index" class="button-slider-entercode" ng-class="{active:indexActive == $index}" ng-click="slide.goTo($index)"><strong>{{$index + 1}}</strong></div>
+        </div>
+        </div>
+      </div>
+      <div class="infor-question">
+        <h4>Thông tin liên quan</h4>
+        <a ng-click="readme(2)" style="width: 190px" click-event-track tracking-data='{"memoEnabled":"true","eventName":"viral campaign faq 1"}'>Thể lệ Học bổng đón xuân</a>
+        <a ng-click="readme(1)" style="width: 180px" click-event-track tracking-data='{"memoEnabled":"true","eventName":"viral campaign faq 2"}'>Giới thiệu Topica Native</a>
+        <a ng-click="readme(3)" style="width: 180px" click-event-track tracking-data='{"memoEnabled":"true","eventName":"viral campaign faq 3"}'>Giá trị quy đổi học bổng</a>
+        <a ng-click="readme(4)" style="width: 250px" click-event-track tracking-data='{"memoEnabled":"true","eventName":"viral campaign faq 4"}'>Hướng dẫn cách sử dụng học bổng</a>
+        <!-- <a ng-click="readme(5)">Giá trị quy đổi học bổng</a> -->
+        <a ng-click="readme(6)" style="width: 135px" click-event-track tracking-data='{"memoEnabled":"true","eventName":"viral campaign faq 5"}'>Khiếu nại, liên hệ</a>
+      </div>
+    </div>
+    <div class="large-8 columns right-infor">
+      <span>Thông tin cá nhân</span>
+      <div class="code-user">
+        <div class="avatar-memo">
+          <img style="border-radius: 50%" src="{{user.url_avatar}}" alt="" ng-class="{true: 'display', false: 'hidden'}[user.url_avatar != '']" >
+          <img style="border-radius: 50%" src="assets/img/profile-avatar-big.png" alt='' ng-class="{true: 'display', false: 'hidden'}[user.url_avatar == '']">
+          <div class="memo-user">
+            <p>{{user.username}}</p>
+            <span>{{user.level_title}}</span>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="code-share">
+          <p>Đã mời được:</p>
+          <span>{{invite_count}} bạn</span>
+        </div>
+        <div class="code-share code-share-2">
+          <p>Số ngày combo:</p>
+          <span>{{combo_days}} ngày</span>
+        </div>
+        <div class="code-share code-share-3">
+          <p>Code chia sẻ:</p>
+          <span class="create-code">{{code}}</span><br>
+          <i style="font-size: 12px;">(Nếu ai đó nhập code này của bạn, bạn được tính là đã mời người đó)</i>
+          <a class="question-hover hidden" tooltip="Code để gửi bạn bè"><img src="assets/img/referral/q.png" alt=""></a>
+        </div>
+        <div class="share-social">
+          <p>Chia sẻ ngay code <span class="code-shares"> {{code}} </span> để <br>nhận học bổng 900,000!</p>
+          <a title="" tracking-data='{"memoEnabled":"true","eventName":"viral campaign share referral"}' facebook-share-button share-type="{{FBShare.shareType}}" share-data="{{FBShare.shareData}}">Share</a>
+        </div>
+        <div class="row">
+          <span class="border" style="height: 1px;background-color: #CCCCCC"></span>
+        </div>
+        <!-- <div class="chart-memo">
+          <img src="assets/img/referral/chart.png" alt="">
+        </div> -->
+        <div class="row">
+          <canvas linechart="" options="chartOptions" data="expChart" width="230" height="150" style="width: 220px; height: 150px;"></canvas>
+        </div>
+        <div class="clear"></div>
+        <div class="code-share code-share-4" ng-class="{true: 'display', false: 'hidden'}[isReferral == '']">
+          <p class="code-error" style="color: #222;font-size: 12px;height: 25px;width: 350px;margin-bottom: 30px;margin-top: -10px"><i>{{notiCode}}</i></p>
+          <p>Nhập code từ bạn bè:</p>
+          <form>
+            <input type="text" name="" value="" placeholder="" ng-model='refCode'>
+            <a title="" ng-click='submitCode()'><img src="assets/img/referral/arrow.png" alt=""></a>
+          </form>
+          <a class="question-hover hidden" title=""><img src="assets/img/referral/q.png" alt=""></a>
+          <p class="code-error">{{error}}
+          </p>
+        </div>
+        <div class="code-share code-share-4" ng-class="{true: 'display', false: 'hidden'}[isReferral != '']">
+          <p>Bạn đã nhập code của <span class="code-shares"> {{userName}} </span>!</p>
+        </div>
+        <div class="clear"></div>
+        <div class="row">
+          <span class="border" style="height: 1px;background-color: #CCCCCC"></span>
+          <p style="font-size: 15px;margin-left: 10px;color: #666;margin-bottom: 0px;margin-top: 10px">Khi bạn đã đủ điều kiện, bấm <b style="color: #810C15"> Xác minh </b>để nhận học bổng</p>
+        </div>
+        <div class="share-social">
+          <p>Bạn đã mời được <span class="code-shares">{{invite_count}}</span> người bạn và thực hiện được <span class="code-shares"> {{combo_days}}</span> ngày học liên tiếp! Kỉ lục combo của bạn là <span class="code-shares"> {{user.highest_combo_days}}</span> ngày</p>
+          <a class="confirm" title="" ng-click='verifyRewards()' style="margin-left: 15px">Xác minh</a>
+        </div>
+        <span class="border"></span>
+        <div class="contact">
+          <p>Nếu có thắc mắc bạn có thể liên hệ </p>
+          <p>Hotline: <strong style="color: #810C15">0972 865 329</strong></p>
+          <p>Email: <strong style="color: #810C15"><a href="mailto:memo@memo.edu.vn" target="_blank">memo@memo.edu.vn</a></strong></p>
+          <p style="margin-bottom:20px">Fanpage: <a href="https://www.facebook.com/topicamemo" target="window_name" ><strong style="color: #810C15"><u>https://www.facebook.com/topicamemo</u></strong></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

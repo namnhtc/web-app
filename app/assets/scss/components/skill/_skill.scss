@@ -1,0 +1,9 @@
+.to-store {
+    margin-top: 10px;
+    > a.memo-button {
+        margin-bottom: 0;
+    }
+}
+
+@import
+    "skill-hexagon.scss";

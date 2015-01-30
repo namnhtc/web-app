@@ -1,0 +1,23 @@
+<div class="question-inner">
+  <div class="small-12 small-centered columns judge">
+    <div class="row">
+      <h4 class="name">Đánh dấu <u>tất cả</u> đáp án đúng</h4>
+    </div>
+    <div class="row">
+      <div class="small-8 columns content">
+        {{judge.question}}
+      </div>
+      <div class="small-8 columns answers">
+        <div class="row" ng-repeat="option in options track by $index">
+          <div class="answer">
+            <input type="checkbox" value="{{option.text}}" ng-click="updateUserAnswer(option)" ng-model="option.checked" ng-required="userAnswer.length > 0" id="option-{{$index}}"> 
+            <label for="option-{{$index}}">
+              <span class="box icon-checkmark"></span>
+              <span style="display: inline-block;width: 220px" popover="Chọn phím tắt {{$index+1}} để lựa chọn câu trả lời" popover-trigger="mouseenter" popover-placement="right">{{$index + 1}}. {{option.text}}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

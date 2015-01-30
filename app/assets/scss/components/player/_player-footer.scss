@@ -1,0 +1,65 @@
+.new-player {
+  .player-container {
+    footer {
+      &.player-footer, &.player-carousel-footer {
+        background-color: $iron;
+        border-radius: 0 0 10px 10px;
+        min-height: 80px;
+        margin: 0 -40px;
+        padding: 20px 40px;
+      }
+      &.player-carousel-footer {
+        .buttons {
+          .button, button {
+            display: inline-block;
+            font-weight: 700;
+            height: 40px;
+            min-width: 150px;
+            padding: 10px 15px;
+            margin: 0;
+          }
+          .button {
+            &.skip, &.previous {
+              background-color: #ededed;
+              color: $oil;
+            }
+            &.continue {
+              background-color: $success-color;
+              margin: 0 5px;
+            }
+          }
+        }
+      }
+    }
+    .carousel-container {
+      position: relative;
+      display: table;
+      margin: 0 auto -36px;
+      width: auto;
+      bottom: 0;
+      .carousel-dots {
+        display: inline-block;
+        position: relative;
+        margin: 5px 0px 0px;
+        list-style: outside none none;
+        bottom: -20px;
+        .carousel-dot {
+          margin: 0px 7px;
+          float: left;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          background: none repeat scroll 0% 0% $white;
+          cursor: pointer;
+          &.active {
+            background: none repeat scroll 0% 0% $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hide-with-space {
+  visibility: hidden;
+}

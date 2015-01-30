@@ -1,0 +1,105 @@
+.login-page {
+  padding-top: 160px;
+  .ant {
+    background: url("assets/img/login-ant.png") no-repeat;
+    display: block;
+    position: absolute;
+    width: 126px;
+    height: 147px;
+    top: -140px;
+    left: 50%;
+    z-index: 1;
+  }
+  .container {
+    background: $white;
+    border-radius: $global-radius;
+    padding: 20px;
+    width: 100%;
+    .title {
+      text-align: center;
+    }
+  }
+  .facebook.button, .google.button, .login.button {
+    font-size: 1em;
+  }
+  .forgot-password {
+    margin-bottom: 20px;
+  }
+}
+
+.login-modal, .register-modal {
+  background: $white;
+  border: none;
+  max-width: rem-calc(400);
+  padding: 20px;
+  text-align: center;
+  min-height: 1px;
+  position: fixed;
+  top: 70px !important;
+  outline: none;
+  input[type="text"], input[type="email"], input[type="password"] {
+    margin-bottom: 10px;
+  }
+  .modal-title {
+    font-size: 1.2em;
+  }
+  .ant {
+    background: url("assets/img/login-ant.png") no-repeat scroll 0% 0% transparent;
+    display: block;
+    position: absolute;
+    width: 126px;
+    height: 147px;
+    top: 50px;
+    z-index: 1;
+    transform: rotate(90deg);
+    right: -150px;
+  }
+  .forgot-password {
+    margin-bottom: 20px;
+  }
+  .modal-footer {
+    background-color: $gainsboro;
+    border-radius: 0 0 10px 10px;
+    height: 64px;
+    text-align: center;
+    p {
+      line-height: 64px;
+    }
+  }
+  .error {
+    color: $warning-font-color;
+  }
+}
+
+.top-bar-section ul li > a.button {
+  border: none !important;
+}
+
+.day_divider hr {
+  position: absolute;
+  border-top: 1px solid #DDD;
+  width: 100%;
+  top: .6rem;
+  margin: 0;
+}
+
+.day_divider_label {
+  background: white;
+  padding: 0 1rem;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.day_divider {
+  background: white;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  color: #555459;
+  text-align: center;
+  cursor: default;
+  clear: both;
+  position: relative;
+  margin-bottom: 18px;
+}
+

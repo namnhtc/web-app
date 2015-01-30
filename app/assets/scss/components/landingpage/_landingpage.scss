@@ -1,0 +1,23 @@
+.landingpage {
+    header {
+        background-color: $white;
+    }
+    .top-bar {
+        background-color: $white;
+    }
+    .top-bar-section {
+        li {
+            background-color: $white;
+        }
+    }
+}
+@import
+    "components/header",
+    "components/head",
+    "components/info",
+    "components/sb",
+    "components/statistic",
+    "components/slogan",
+    "components/comment",
+    "components/footer",
+    "components/forget-password";

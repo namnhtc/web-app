@@ -1,0 +1,23 @@
+<div class="page-referral">
+  <div class="row">
+    <div class="large-4 columns menu-left">
+      <button class="button-screen-2-center" ng-class="{disable: !view.intro}" ng-click="displayIntro()">
+      <span class="circle" ng-class="{disable: !view.intro}">1</span>
+      Topica Native là gì?
+      </button>
+      <button class="button-screen-2-center" ng-class="{disable: !view.price}" ng-click="displayPriceScholarship()">
+      <span class="circle" ng-class="{disable: !view.price}">2</span>
+      Bảng giá và học bổng
+      </button>
+      <button class="button-screen-2-center" ng-class="{disable: !view.payment}" ng-click="displayPaymentMethod()">
+      <span class="circle" ng-class="{disable: !view.payment}">3</span>
+      Các hình thức thanh toán
+      </button>
+    </div>
+    <div class="large-12 columns slider-step-2">
+      <div ng-show="view.intro" native-page-intro></div>
+    </div>
+    <div ng-show="view.price" price-scholarship></div>
+    <div ng-show="view.payment" payment-method></div>
+  </div>
+</div>

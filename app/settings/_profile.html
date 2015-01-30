@@ -1,0 +1,71 @@
+<section class="app">
+<div class="setting-page">
+  <div class="main-left">
+    <div class="container">
+      <section class="setting-profile">
+        <div class="row">
+          <h3 class="title left">Thông tin cá nhân</h3>
+          <a class="small radius button right save-change" ng-click="saveChanges()">Lưu thay đổi</a>
+        </div>
+        <div class="row">
+          <div class="large-12 columns large-centered">
+            <div class="row">
+              <div class="large-6 columns">Tên đầy đủ</div>
+              <div class="large-10 columns">
+                <input type="text" ng-model="user.name"/>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="large-6 columns">Địa chỉ</div>
+              <div class="large-10 columns">
+                <input type="text" ng-model="profile.address" id="" />
+              </div>
+            </div> -->
+            <!-- <div class="row">
+              <div class="large-6 columns">Tiểu sử</div>
+              <div class="large-10 columns">
+                <textarea ng-model="settingProfile.content"></textarea>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="large-6 columns">Học tập từ</div>
+              <div class="large-10 columns" style="margin-bottom: 10px;"><span ng-bind="user.created_at.date"></span></div>
+            </div>
+            <div class="row connection-fb">
+              <div class="large-6 columns" style="margin-top: 15px">Kết nối Facebook</div>
+              <div class="large-10 columns">
+                <!-- <p>Bạn đã được kết nối dưới tên</p> -->
+                <a href="" ng-if="user.fb_Id == ''" class="radius facebook button" ng-click="linkFb()">Kết nối</a>
+                <a href="" ng-if="user.fb_Id != ''" class="radius facebook button" ng-click="unlinkFb()">Ngắt kết nối</a>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="large-6 columns">Tự động chia sẻ Facebook</div>
+              <div class="large-10 columns">
+                <input type="radio" name="fb-share" id="fb-enable"/>
+                <label for="fb-enable">Mở</label>
+                <input type="radio" name="fb-share" id="fb-disable" />
+                <label for="fb-disable">Tắt</label>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="large-6 columns" style="margin-top: 15px">Kết nối Google+</div>
+              <div class="large-10 columns connection-google">
+                <div class="large-10 columns" style="padding: 0px">
+                  <!-- <p>Bạn đã được kết nối dưới tên</p> -->
+                  <a href="" ng-if="user.gmail == ''" class="radius google button" ng-click="linkGoogle()">Kết nối</a>
+                <a href="" ng-if="user.gmail != ''" class="radius google button" ng-click="unlinkGoogle()">Ngắt kết nối</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="main-right">
+    <side-nav></side-nav>
+  <app-version></app-version>
+</div>
+</div>
+</section>

@@ -1,0 +1,156 @@
+html, body {
+  min-width: rem-calc(1120);
+  width: 100%;
+}
+
+body {
+  background: url("assets/img/bg-bottom-repeat.png") repeat-x fixed center bottom $gainsboro;
+  background-size: 280px 320px;
+}
+
+.full {
+  display: block;
+  float: left;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  display: block;
+  float: left;
+  min-width: $row-width;
+}
+
+.top-bar {
+  min-width: $row-width;
+}
+
+.app {
+  margin-bottom: 20px;
+}
+
+.container {
+  display: block;
+  position: relative;
+}
+
+.facebook.button {
+  background: #1f518b;
+  &:hover {}
+}
+
+.google.button {
+  background: #eb4a24;
+  &:hover {}
+}
+
+.facebook.button, .google.button, .login.button {
+  font-size: 1em;
+}
+
+#search-friend {
+  border-radius: 10px;
+  padding: 10px;
+  max-width: none;
+  width: 230px !important;
+  h4 {
+    font-weight: bold;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+a.reverse.button {
+  background-color: $white;
+  border: 2px solid $primary-color;
+  border-radius: $global-radius;
+  color: $primary-color;
+  font-weight: 600;
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.memo-button {
+  @include button($padding: $button-tny, $radius: $global-radius);
+  font-size: $button-font-med;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0;
+  &.secondary {
+    @include button($padding: $button-tny, $bg: $white, $radius: $global-radius);
+    border: 2px solid $gold;
+    color: $primary-color;
+    font-size: $button-font-med;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+    &:hover {
+      background-color: $gold;
+      color: $primary-color;
+    }
+
+  }
+  &.third {
+    @include button($padding: $button-tny, $bg: $white, $radius: $global-radius);
+    border: 2px solid $gold;
+    color: $primary-color;
+    font-size: $button-font-med;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+    background: $white url("assets/img/cart.png") no-repeat;
+    background-origin: content-box;
+    &:hover {
+      color: $primary-color;
+      background: $gold url("assets/img/cart-hover.png") no-repeat;
+      background-origin: content-box;
+    }
+
+  }
+}
+
+.hex-memo-button {
+  @include button($padding: $button-med);
+  background: url("assets/img/button-checkpoint-bg.png") no-repeat;
+  background-position: -300px 0;
+  color: $primary-color;
+  line-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-algin: middle;
+  width: 300px;
+  &.secondary {
+    background-position: 0 0;
+    background-color: transparent;
+    color: $primary-color;
+    &:hover {
+      background-position: -300px 0;
+      color: $white;
+      font-weight: 700;
+      .icon-lock {
+        color: $white;
+      }
+    }
+    .icon-lock {
+      color: $gold;
+    }
+  }
+  &.disabled {
+    background-position: -600px 0;
+    color: $white;
+    font-weight: 700;
+    &:hover {
+      background-position: -600px 0;
+    }
+    .icon-lock {
+      color: $white;
+    }
+  }
+}
+
+.hide {
+  display: none !important;
+}

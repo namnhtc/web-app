@@ -1,0 +1,27 @@
+<h4>Mời bạn Facebook</h4>
+<div class="row">
+  <div class="large-16 columns">
+    <input type="text" ng-model="search.username" class="search-box" placeholder="Tìm bạn" />
+  </div>
+</div>
+<div class="row facebook-friend-list">
+  <div class="row friend" ng-repeat="friend in friends | filter:search.username">
+    <div class="large-16 columns">
+      <div class="row">
+        <div class="large-3 columns avatar">
+          <img ng-src="{{friend.url_avatar || 'assets/img/profile-avatar-big.png'}}" />
+        </div>
+        <div class="large-8 columns nickname">{{friend.username}}</div>
+        <div class="large-5 columns buttons">
+          <a ng-if="!friend.is_following"class="large-16 large secondary memo-button follow" ng-click="follow(friend.user_id)">Thêm</a>
+          <a ng-if="friend.is_following" class="large-16 large memo-button" ng-click="unfollow(friend.user_id)">Bạn bè</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-16 columns">
+    <a href="" class="large-16 secondary show-leaderboard memo-button" ng-click="showTheLeaderboard()">Trở về</a>
+  </div>
+</div>

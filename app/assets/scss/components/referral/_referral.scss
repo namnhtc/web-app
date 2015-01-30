@@ -1,0 +1,106 @@
+.verify-rewards-modal {
+  position: fixed !important;
+  top: 70px !important;
+  min-height: 150px !important;
+  width: 550px;
+  overflow: hidden;
+  outline: none;
+  border: 0;
+  .text-red {
+    color: #810c15;
+  }
+  .verify-reward-container div {
+    margin-bottom: 1.25rem;
+  }
+  .verify-reward-container div p {
+    margin-bottom: 0px;
+  }
+  .verify-reward-container div.guide .sms-guide {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    background: #FDE598;
+    padding: 15px;
+  }
+}
+
+.readme-modal {
+  outline: none;
+  min-height: 480px !important;
+  min-width: 550px !important;
+}
+
+.verify-box {
+  @include grid-row;
+  .verify-box-inner {
+    @include grid-column($columns: 16);
+    min-height: 32px;
+    .verify-button {
+      border: 0;
+      height: 40px;
+      margin-top: -2px;
+    }
+    .verify-box-code {
+      &.has-code {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+  }
+}
+
+.submit-code-modal {
+  border: 0;
+  width: 400px;
+  padding: 10px;
+  outline: 0;
+  .submit-code-modal-inner {
+    @include grid-row;
+    .submit-code-modal-header {
+      @include grid-column($columns: 16);
+      height: 54px;
+      line-height: 54px;
+      margin-bottom: 1rem;
+      > h5 {
+        background: #ffbb33;
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        line-height: 54px;
+      }
+    }
+    .submit-code-modal-cta, .submit-code-modal-error {
+      text-align: center;
+    }
+    .submit-code-modal-error {
+      color: $primary-color;
+    }
+  }
+  .button-grey {
+    @include button($bg: $iron, $padding: $button-med, $full-width: true, $radius: true);
+    margin-bottom: 1.2rem;
+    height: 40px;
+    padding-top: .5rem;
+  }
+  .button {
+    margin-bottom: 1.2rem;
+    height: 40px;
+    padding-top: .5rem;
+  }
+}
+
+.referral-fb-share-tooltip {
+  right: -330px;
+  width: 330px !important;
+  height: auto !important;
+  text-align: left;
+  z-index: 10;
+  .joyride-content-wrapper {
+    padding-top: 30px !important;
+  }
+  .referral-highlight {
+    font-weight: 700;
+    color: #FB3;
+  }
+}

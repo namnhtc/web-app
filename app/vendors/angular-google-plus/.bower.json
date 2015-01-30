@@ -1,0 +1,31 @@
+{
+  "name": "angular-google-plus",
+  "homepage": "https://github.com/mrzmyr/angular-google-plus",
+  "authors": [
+    "Moritz Meyer <m0ritz.m3yer@gmail.com>"
+  ],
+  "main": "dist/angular-google-plus.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0"
+  },
+  "_release": "9f48c1fc81",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9f48c1fc81ccf37349c160b50453f1a028d2b57c"
+  },
+  "_source": "https://github.com/hainp/angular-google-plus.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/hainp/angular-google-plus.git"
+}

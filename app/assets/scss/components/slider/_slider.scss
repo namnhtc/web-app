@@ -1,0 +1,72 @@
+.slider {
+    padding:10px;
+    color: #999;
+    display: block;
+    margin: 20px auto auto;
+    max-width: $row-width;
+    min-width: 260px;
+    position: relative;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.slider-inner {
+    background: none repeat scroll 0 0 #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+.slider-inner > ul {
+    list-style: none;
+    margin-left: 0;
+    min-height: 520px;
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.slider-inner > ul > li {
+    width: 20%;
+    float: left;
+}
+
+.slider input[type=radio] {
+    visibility: hidden;
+}
+
+.slider label {
+    border: solid 2px #fff; 
+    position: absolute;
+    bottom: -50px;
+    z-index: 100;
+    width: 20px;
+    height: 20px;
+    background-color:#fff;
+    cursor: pointer;
+    transition: background-color .2s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+}
+
+.slider input[type=radio]#control-1:checked~label[for=control-1] { background-color: $primary-color; }
+.slider input[type=radio]#control-2:checked~label[for=control-2] { background-color: $primary-color; }
+.slider input[type=radio]#control-3:checked~label[for=control-3] { background-color: $primary-color; }
+.slider input[type=radio]#control-4:checked~label[for=control-4] { background-color: $primary-color; }
+.slider input[type=radio]#control-5:checked~label[for=control-5] { background-color: $primary-color; }
+.slider label[for=control-1] { margin-left: -40px }
+.slider label[for=control-2] { margin-left: -20px }
+.slider label[for=control-3] { margin-left: 0px }
+.slider input[type=radio]#control-1:checked~.slider-inner > ul { left: 0 }
+.slider input[type=radio]#control-2:checked~.slider-inner > ul { left: -100% }
+.slider input[type=radio]#control-3:checked~.slider-inner > ul { left: -200% }

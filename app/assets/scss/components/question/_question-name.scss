@@ -1,0 +1,39 @@
+.player .question {
+    .name {
+	.content {
+            position: relative;
+            text-align: center;
+            .image {
+		background-color: $white;
+		border-radius: $global-radius;
+		box-shadow: 2px -1px 3px 2px $smoke;
+		padding: 10px;
+		position: absolute;
+		height: 163px;
+		width: 163px;
+		overflow: hidden;
+		&.image-1 {
+                    transform: rotate(-10deg);
+                    left: -100px;
+                    top: -23px;
+                    z-index: 1;
+		}
+		&.image-2 {
+                    z-index: 5;
+		    top: -63px;
+                    left: 30px;
+		}
+		&.image-3 {
+                    transform: rotate(10deg);
+                    left: 150px;
+                    top: -23px;
+                    z-index: 1;
+		}
+		img {
+		    width: 100%;
+		    height: 100%;
+		}
+            }
+	}
+    }
+}

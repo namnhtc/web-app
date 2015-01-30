@@ -1,0 +1,13 @@
+<div class="container">
+  <a class="close-reveal-modal" ng-click="dismissReport()" style="top: -35px;right: -15px">&#215;</a>
+  <h3>Báo lỗi</h3>
+  <div class="row">
+    <div class="large-16 columns">
+      <textarea id="cleartext" ng-model="data.content" style="resize: none;"></textarea>
+    </div>
+    <div class="large-16 columns">
+      <a class="large-7 small radius button" ng-click="reportBug()">Gửi</a>
+      <a class="large-7 small radius button" ng-click="cancel()" style="margin-left: 35px">Hủy</a>
+    </div>
+  </div>
+</div>

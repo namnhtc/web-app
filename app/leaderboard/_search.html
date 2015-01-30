@@ -1,0 +1,34 @@
+<h4>Tìm kiếm</h4>
+<div class="row">
+  <div class="large-16 columns">
+    <input type="text" class="search-box" ng-model="search.keywords" placeholder="Tên hoặc email" />
+  </div>
+</div>
+<div class="row">
+  <div class="large-16 columns">
+    <a href="" class="large-16 large memo-button search-frid" ng-click="searchMemoFriends()">Tìm kiếm</a>
+  </div>
+</div>
+<div class="row friend-list">
+  <div class="friend" ng-repeat="user in friends">
+    <a ng-href="/profile/{{user.user_id}}">
+      <div class="large-16 columns">
+        <div class="row add-friend">
+          <div class="large-3 columns avatar avt-friend">
+            <img ng-src="{{user.url_avatar || 'assets/img/profile-avatar-big.png'}}" />
+          </div>
+          <div class="large-7 columns nickname">{{user.username}}</div>
+          <div class="large-5 columns buttons">
+            <a ng-if="!user.is_following"class="large-16 large secondary memo-button follow btn-friend" ng-click="follow(user.user_id)">Thêm</a>
+            <a ng-if="user.is_following" class="large-16 large memo-button btn-friend" ng-click="unfollow(user.user_id)">Bạn bè</a>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="row btn-back-leaderboard">
+  <div class="large-16 columns">
+    <a href="" class="large-16 secondary show-leaderboard memo-button" ng-click="showTheLeaderboard()">Trở về</a>
+  </div>
+</div>

@@ -1,0 +1,417 @@
+.hexagon {
+  $skill-width: 140px;
+  $skill-height: 200px;
+  $skill-margin-left: 10px;
+  $skill-margin-right: 10px;
+  $skill-margin-top: -27px;
+  $skill-alias: skill !default;
+  &.skills {
+    float: left;
+    margin-top: 47px;
+  }
+  .to-store {
+    &:hover {
+      .cart {
+        background: url("assets/img/cart-hover.png") no-repeat;
+      }
+    }
+    .cart {
+      background: url("assets/img/cart.png") no-repeat;
+      display: inline-block;
+      line-height: 20px;
+      height: 20px;
+      width: 26px;
+      vertical-align: middle;
+    }
+  }
+  .skill-row {
+    @include grid-row;
+    float: left;
+    text-align: center;
+    position: relative;
+    .test-out {
+      margin: 27px auto 54px;
+    }
+    .skill {
+      background: url("assets/img/hex-units.png") no-repeat;
+      position: relative;
+      float: left;
+      display: inline-block;
+      margin: $skill-margin-top $skill-margin-right 0px $skill-margin-left;
+      height: $skill-height;
+      padding-top: 27px;
+      width: $skill-width;
+      a {
+        color: $white;
+        display: block;
+      }
+      .name {
+        margin: 10px auto;
+      }
+      .level {
+        width: 110px;
+        margin: 0 auto;
+      }
+      .icon {
+        margin: 5px auto;
+        height: 70px;
+        width: 70px;
+      }
+      &.unlocked {
+        color: $white;
+        .strength-bar {
+          height: 41px;
+          background: url("assets/img/hex-strength.png") no-repeat;
+        }
+        &.red {
+          background-position: -140px 0;
+        }
+        &.green {
+          background-position: -280px 0;
+        }
+        &.blue {
+          background-position: -420px 0;
+        }
+        &.success {
+          background-position: -560px 0;
+        }
+        .level-2 .strength-bar {
+          background-position: 0 -123px;
+        }
+        .level-3 .strength-bar {
+          background-position: 0 -82px;
+        }
+        .level-4 .strength-bar {
+          background-position: 0 -41px;
+        }
+      }
+      &.locked {
+        background-position: 0 0;
+        a {
+          cursor: default;
+        }
+        .name, .level {
+          color: $aluminum;
+        }
+      }
+      $x: 1;
+      @for $i from 0 through 4 {
+        @for $j from 0 through 10 {
+          &.#{$skill-alias}-#{$x} {
+            .icon {
+              background-position: $j * -70px $i * -70px;
+            }
+          }
+          $x: $x + 1;
+        }
+      }
+    }
+    &.skill-block-2 {
+      .skill {
+        &:first-child {
+          &:not(.skill-offset-1) {
+            margin-left: 100px;
+          }
+        }
+      }
+      .skill-offset-1 {
+        margin-left: 100px + $skill-width + 2 * $skill-margin-left;
+      }
+    }
+    &.skill-block-3 {
+      .skill {
+        &:not(.skill-offset-1) {
+          &:first-child {
+            &:not(.skill-offset-2) {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .skill-offset-1 {
+        margin-left: 10px + $skill-width + 3 * $skill-margin-left;
+      }
+      .skill-offset-2 {
+        margin-left: 10px + 2 * $skill-width + 5 * $skill-margin-left;
+      }
+    }
+  }
+  .skill-page {
+    float: left;
+    margin-top: 24px;
+    width: 100%;
+    .skill {
+      background: url("assets/img/hex-lessons.png") no-repeat;
+      padding-top: 117px;
+      height: 552px;
+      width: 100%;
+      &.red {
+        background-position: 0 0;
+      }
+      &.green {
+        background-position: -260px 0;
+      }
+      &.blue {
+        background-position: -520px 0;
+      }
+      &.success {
+        background-position: -780px 0;
+      }
+      $k: 1;
+      @for $i from 0 through 4 {
+        @for $j from 0 through 10 {
+          &.#{$skill-alias}-#{$k} {
+            .icon {
+              background-position: $j * -120px $i * -120px;
+            }
+          }
+          $k: $k + 1;
+        }
+      }
+      .icon {
+        margin: 0 auto 30px;
+        height: 120px;
+        width: 120px;
+      }
+      .name {
+        color: $white;
+        margin-bottom: 30px;
+      }
+      .test-out {
+        background: url("assets/img/sample-testout-button.png") no-repeat;
+        color: $primary-color;
+        margin: 0 auto;
+        width: 120px;
+      }
+    }
+    .lessons {
+      .grammar-note {
+        margin-top: 26px;
+        margin-bottom: 15px;
+      }
+      .lesson {
+        float: left;
+        background-color: $white;
+        border-radius: $global-radius;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        width: 260px;
+        height: 190px;
+        &.past, &.unlocked {
+          &.red {
+            a.memo-button {
+              background-position: 0 -80px;
+            }
+          }
+          &.green {
+            a.memo-button {
+              background-position: 0 -120px;
+            }
+          }
+          &.blue {
+            a.memo-button {
+              background-position: 0 -40px;
+            }
+          }
+        }
+        &.past {
+          i {
+            color: $gold;
+            display: inline-block;
+          }
+          a.memo-button {
+            &.success {
+              background-position: 0 0;
+            }
+          }
+        }
+        &.locked {
+          background-color: $smoke;
+          i.icon-lock {
+            display: inline-block;
+          }
+          a.memo-button {
+            background-position: 0 -160px;
+          }
+        }
+        h4.name {
+          font-weight: 700;
+        }
+        i {
+          display: none;
+        }
+        .objectives {
+          margin-bottom: 20px;
+          margin-top: 15px;
+          padding: 0;
+          font-size: .9em;
+          min-height: 55px;
+        }
+        a.memo-button {
+          background: url("assets/img/lesson-buttons.png") no-repeat;
+          height: 40px;
+          width: 200px;
+        }
+      }
+      .tick-lesson {
+        float: right;
+      }
+    }
+  }
+}
+
+.test-out {
+  &.hex-memo-button {
+    margin-bottom: 47px;
+  }
+}
+
+.tick-lesson {
+  display: none;
+}
+
+.past .tick-lesson {
+  display: block;
+}
+
+.question, .question-inner {
+  outline: none;
+}
+
+.answers {
+  margin-bottom: 30px;
+}
+
+button.small, .button.small {
+  font-size: 16px;
+}
+
+.home-page.main .main-right .container .facebook-search, .home-page.main .main-right .container .memo-search, .home-page.main .main-right .container .email-invitation, .plaza.main .main-right .container .facebook-search, .plaza.main .main-right .container .memo-search, .plaza.main .main-right .container .email-invitation {
+  line-height: 36px;
+  font-size: 14px;
+}
+
+.icon-arrow-right:before {
+  display: block;
+  margin-left: 5px;
+}
+
+#report-dropdown {
+  margin-top: 8px;
+}
+
+#report-dropdown textarea {
+  outline: none;
+  margin-top: 5px;
+}
+
+.player .question .translate .text {
+  line-height: 0 !important;
+}
+
+.right {
+  text-align: right;
+}
+
+.memo-button {
+  text-align: center;
+}
+
+#report-dropdown .button.close {
+  margin-right: 15px;
+}
+
+.app-top-bar .top-bar .top-bar-section ul.left li.menu-item {
+  margin-left: 10px;
+}
+
+span.tooltip {
+  width: 180px !important;
+  margin: 0 !important;
+  padding: 5px 5px !important;
+  text-align: center;
+}
+
+a.close, a.send {
+  margin-bottom: 0 !important;
+}
+
+.hexagon .skill-row .test-out {
+  font-weight: bold;
+}
+
+.hexagon .skill-page .blue1 .unlocked a.memo-1 {
+  background-position: 0px -40px;
+}
+
+.hexagon .skill-page .green1 .unlocked a.memo-2 {
+  background-position: 0px -120px;
+}
+
+.hexagon .skill-page .red1 .unlocked a.memo-3 {
+  background-position: 0px -80px;
+}
+
+.memos {
+  width: auto !important;
+}
+
+.exp {
+  width: auto !important;
+}
+
+.main-right .report {
+  padding: 0 !important;
+}
+
+#dropdown-setting > li > a:hover {
+  background-color: #810c15;
+}
+
+.report a.button {
+  margin-bottom: 5px;
+}
+
+.course-page .course img {
+  float: left;
+}
+
+.row .columns .reverse {
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#report-dropdown textarea {
+  color: #9D9D9D;
+}
+
+.hex-memo-button.disabled {
+  font-size: 14px;
+  cursor: default;
+}
+
+.player .question .name .content .image {
+  box-shadow: 0px -1px 3px 2px #EEE !important;
+}
+
+.past .name-lesson {
+  padding-left: 40px;
+}
+
+.replay {
+  background: #9C0;
+}
+
+.button-back {
+  width: 20%;
+}
+
+.button-replay {
+  margin-left: 50px;
+}
+
+.back-home {
+  width: 100%;
+}

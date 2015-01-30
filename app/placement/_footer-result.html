@@ -1,0 +1,41 @@
+<div class="container {{result.result ? 'success' : 'fail'}}">
+  <div class="small-8 columns">
+    <div class="row">
+      <div class="small-2 columns text-center">
+        <h3 class="icon-{{result.result ? 'checkmark' : 'close'}}"></h3>
+      </div>
+      <div class="small-14 columns">
+        <h4 class="result" ng-if="result.result && result.answerOptions">Bạn có lỗi nhỏ</h4>
+        <h4 class="result" ng-if="!result.result">Đáp án đúng</h4>
+        <h4 class="result" ng-if="result.result && !result.answerOptions">Chính xác</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns"></div>
+      <div class="small-14 columns">
+        <h4 ng-if="!result.result" class="correct answer">{{result.correctAnswer}}</h4>
+        <h4 ng-if="result.result && result.answerOptions" ng-bind-html="result.answerOptions"></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-2 columns"></div>
+      <div class="small-14 columns">
+        <div class="row">
+          <div class="small-5 columns" style="padding-left: 0;">
+            <a ng-href="" dropdown-toggle="#report-dropdown" class="small-16 memo-button report">Báo lỗi</a>
+            <div id="report-dropdown" class="f-dropdown" report-dropdown show-on-click="true"></div>
+          </div>
+          <div class="small-6 columns">
+            <a href="" class="small-14 memo-button discussion" ng-click="discussion()">Thảo luận</a>
+          </div>
+          <div class="small-4 columns"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="small-4 columns">
+  </div>
+  <div class="small-4 columns">
+    <a href="" class="right small-9 memo-button continue" ng-click="nextQuestion()">Tiếp tục</a>
+  </div>
+</div>

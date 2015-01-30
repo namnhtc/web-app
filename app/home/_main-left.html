@@ -1,0 +1,88 @@
+<div class="container">
+  <section class="profile profile-embed">
+    <div class="row">
+      <div class="large-6 columns avatar small">
+        <img ng-src="{{ profile.url_avatar || 'assets/img/profile-avatar-big.png' }}" style="width:60px;height:60px;border-radius:50%;"/>
+      </div>
+      <div class="large-10 columns username">
+        <h4>{{profile.username}}</h4>
+      </div>
+    </div>
+    <div class="row" ng-show="referral.record.code">
+      <hr />
+      <div class="campaign-left" style="margin-left:-10px;margin-right:-10px;">
+        <div class="row" style="margin-top: 10px;">
+          <div class="large-10 columns">
+            Đã mời được:
+          </div>
+          <div class="large-6 columns text-right" style="font-weight: 700;">
+            {{referral.record.invited_count}} bạn
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 columns">
+            Số ngày combo:
+          </div>
+          <div class="large-6 columns text-right" style="font-weight: 700;">
+            {{profileDetail.combo_days}} ngày
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-10 columns">
+            Code chia sẻ:
+          </div>
+          <div class="large-6 columns text-right" style="font-weight: 700;">
+            {{referral.referral_code}}
+          </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+          <div class="large-9 columns large-centered text-center" style="position:relative;">
+            <a title="" class="radius button share" tracking-data='{"memoEnabled":"true","eventName":"viral campaign share profile"}' facebook-share-button share-type="{{FBShare.shareType}}" share-data="{{FBShare.shareData}}"></a>
+            <!-- <referral-fb-share-tooltip viral-level="referral.viral_level" show-on='["v4", "v5"]'></referral-fb-share-tooltip> -->
+          </div>
+        </div>
+        <!-- <div class="row text-center">
+          <a ng-href="/referral" click-event-track tracking-data='{"campaign":"REFERRAL","code_channel":"PROFILE_E8","screen":""}'><b><u>Xem thông tin học bổng</u></b></a>
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="row" ng-show="referral.viral_level == 'v6'">
+      <hr />
+      <div class="row">
+        <p class="text-center">Bạn đã đủ điều kiện nhận được học bổng <b>{{referral.record.bonus_status.total_achieved_gift_value}},000 VNĐ</b></p>
+      </div>
+      <div class="row">
+        <div class="large-16 columns" ng-controller="VerifyRewardModalCtrl" style="position: relative;">
+          <a class="expand radius button" ng-click="verifyRewards()">Xác minh</a>
+          <referral-fb-share-tooltip viral-level="referral.viral_level" show-on='["v6"]'></referral-fb-share-tooltip>
+        </div>
+      </div>
+    </div> -->
+    <hr />
+    <div class="row">
+      <div class="large-4 columns streak">
+        <i tooltip="Combo" class="icon"></i><span class="text">{{profileDetail.combo_days}}</span>
+      </div>
+      <div class="large-6 columns exp">
+        <i tooltip="Kinh nghiệm" class="icon"></i>
+        <span class="text">{{profileDetail.exp}}</span>
+      </div>
+      <div class="large-6 columns memos">
+        <i tooltip="Memo coin" class="icon"></i><span class="text">{{profileDetail.virtual_money}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-16 columns memo-progress">
+        <span class="current-level">{{profileDetail.level}}</span>
+        <div class="padder">
+          <div class="bar" style="width: {{(profileDetail.next_level - profileDetail.previous_level) / (profileDetail.exp - profileDetail.previous_level)}}%;"></div>
+        </div>
+        <span class="next-level">{{profileDetail.level + 1}}</span>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <canvas linechart options="chartOptions" data="expChart" width="220" height="150"></canvas>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,20 @@
+<div class="question-inner">
+  <div class="small-16 small-centered columns select">
+    <div class="row">
+      <h4 class="name">Chọn nghĩa của từ "{{question.question}}"</h4>
+    </div>
+    <div class="row">
+      <div class="small-16 columns answers">
+        <div class="row">
+          <form>
+            <div class="image image-{{$index + 1}}" ng-repeat="option in options track by $index" ng-click="selectAnswer($index + 1)" popover="Chọn phím {{$index+1}} để lựa chọn câu trả lời!" popover-trigger="mouseenter" popover-placement="bottom" >
+              <img ng-src="{{option.image_file}}" />
+              <input type="radio" name="answer" value="{{option.text}}" ng-model="select.userAnswer"/>
+              <label>{{option.text}}</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

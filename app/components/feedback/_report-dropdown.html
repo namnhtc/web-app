@@ -1,0 +1,11 @@
+<li class="(option.id == '5458e5524574682c920a0000) ? '' : 'unhoverable'" ng-repeat="option in options track by $index">
+  <input type="checkbox" ng-if="option.id !== '5458e5524574682c92090000'" ng-model="option.checked" id="{{option.id}}"/>
+  <label for="{{option.id}}" ng-if="option.id != '5458e5524574682c92090000'"><span class="box icon-checkmark"></span>{{option.name}}</label>
+  <textarea placeholder ="Mô tả vấn đề của bạn" ng-if="option.id == '5458e5524574682c920a0000'" ng-model="option.text"></textarea>
+</li>
+<li class="row unhoverable">
+  <div class="small-8 columns right">
+    <a class="small-6 radius close button">Hủy</a>
+    <a class="small-6 radius send button" ng-click="send()">Gửi</a>
+  </div>
+</li>

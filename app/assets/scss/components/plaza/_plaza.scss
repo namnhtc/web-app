@@ -1,0 +1,45 @@
+.plaza {
+    .item {
+	img {
+	    padding-top: 5px;
+	}
+	h5.name {
+	    font-weight: 700;
+	}
+    }
+}
+.vptl {
+    float: left;
+}
+.back-lesson{
+	float: right;
+	border-radius: 5px;
+	background-color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 4px 30px;
+	border: 2px solid #FB3;
+	color: #810C15;
+	font-size: 15px;
+	margin-top: 15px;
+}
+.back-lesson:hover{
+	background-color:#FB3;
+	color: #fff;
+}
+.plaza .item img{
+    padding: 0 !important;
+}
+.vp-tl {
+    padding: 0;
+    text-align: right;
+}
+a#vp{
+    font-size: 19px;
+    font-weight:bold;
+    margin-bottom: 0 !important;
+    img.rb{
+        margin-top: -4px;
+    }
+}

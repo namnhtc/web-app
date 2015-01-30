@@ -1,0 +1,71 @@
+<div class="row" xmlns="http://www.w3.org/1999/html">
+  <div class="large-16 columns">
+    <div class="row" ng-hide="hideAnt"><span class="ant"></span></div>
+    <div class="container">
+      <h4 class="title" style="margin-top: 0px;margin-bottom: 0px">Đăng nhập</h4>
+      <p class="error"style="margin-bottom: 5px;margin-top: 0px;font-size: 16px">{{error}}</p>
+      <form>
+        <div class="row">
+          <div class="large-16 columns"style="margin-bottom: 0px;height: 35px;margin-top: 0px;font-size: 14px" >
+            <p>Đăng kí với 1 click để tìm và thi đua với bạn bè</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-16 columns">
+            <a class="large-16 small radius facebook button" facebook-login-button style="margin-bottom:10px;margin-top: 0px;height:50px;">
+              Facebook
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-16 columns">
+            <a class="large-16 small radius google button" ng-click="GLogin()" style="margin-bottom:5px;height:50px;">
+              Google
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="day_divider"style="margin-top: 5px;margin-bottom: 10px">
+            <hr role="separator" aria-hidden="true"><div class="day_divider_label">hoặc</div>
+          </div>
+        </div>
+        <div class="row fields">
+          <div class="small-16 columns">
+            <input class="username" ng-model="user.username" type="text" placeholder="Tên đăng nhập hoặc email">
+          </div>
+        </div>
+        <div class="row fields">
+          <div class="small-16 columns">
+            <input class="password" ng-model="user.password" type="password" placeholder="Mật khẩu">
+          </div>
+        </div>
+        <div class="row fields" ng-show="showReferralInput()">
+          <div class="small-16 columns">
+            <input class="name" ng-model="user.referral_code" type="text" placeholder="Code chia sẻ từ bạn bè (không bắt buộc)" tooltip="Điền code chia sẻ bạn nhận được tại đây"  tooltip-trigger="focus" tooltip-placement="right">
+          </div>
+        </div>
+        <div class="row" style="margin-top: 5px">
+          <div class="large-16 columns">
+            <a class="large-16 small radius login button" ng-click="login()" style="margin-bottom: 5px;">Đăng nhập</a>
+          </div>
+        </div>
+        <div class="row" ng-show="hideAnt">
+          <div class="large-16 columns">
+            <p><i>(Bạn có thể nhập code từ bạn bè ngay sau khi đăng nhập)</i></p>
+          </div>
+        </div>
+        <div class="text">
+          <div class="large-16 columns" align="center">
+            <u><a style="color: #999999" ng-click="forgetModal()">Quên mật khẩu</a></u>
+          </div>
+        </div>
+        <div class="text" style="margin-bottom: 10px">
+          <div class="large-16 columns" align="center">
+            <span>Chưa có tài khoản ?</span>
+            <a  ng-click="registerModal()">Đăng ký ngay</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

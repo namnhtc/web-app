@@ -1,0 +1,97 @@
+.landingpage {
+    .sb-1 {
+        display: block;
+        width: 100%;
+        min-height: 300px;
+        float: left;
+        > * {
+            position: absolute;
+        }
+    }
+
+    .sb-2 {
+        display: block;
+        width: 100%;
+        min-height: 300px;
+        float: left;
+        > * {
+            position: absolute;
+        }
+    }
+    .sb {
+        background-color: $white;
+        height: 540px;
+        .container {
+            height: 540px;
+        }
+        .appear {
+	    .button.link {
+		border-radius: $global-radius;
+	    }
+            &.sb-1 {
+                .image-1 {
+                    background: url('assets/img/landingpage/4-top-1.png') no-repeat;
+                    background-size: cover;
+                    top: 60px;
+                    right: 490px;
+                    width: 265px;
+                    height: 172px;
+                    z-index: 2;
+                    @include animation(fadeIn 1s);
+                }
+                .image-2 {
+                    background: url('assets/img/landingpage/4-top-2.png') no-repeat;
+                    top: 60px;
+                    right: 655px;
+                    width: 308px;
+                    height: 172px;
+                    z-index: 3;
+                    @include animation(fadeIn 2s);
+                }
+                .text {
+                    right: 30px;
+                    top: 70px;
+                    width: 440px;
+                    height: 130px;
+                    z-index: 1;
+                    h3.title, .link {
+                        font-weight: 700;
+                    }
+                    @include animation(fadeIn 2s);
+                }
+            }
+            &.sb-2 {
+                .image-1 {
+                    background: url('assets/img/landingpage/4-bot-1.png') no-repeat;
+                    width: 241px;
+                    height: 188px;
+                    left: 490px;
+                    bottom: 70px;
+                    z-index: 2;
+                    @include animation(fadeIn 1.5s);
+                }
+                .image-2 {
+                    background: url('assets/img/landingpage/4-bot-2.png') no-repeat;
+                    width: 330px;
+                    height: 140px;
+                    left: 703px;
+                    bottom: 70px;
+                    z-index: 3;
+                    @include animation(fadeIn 1.5s);
+                }
+                .text {
+                    left: 50px;
+                    top: 307px;
+                    width: 420px;
+                    min-height: 163px;
+                    text-align: right;
+                    z-index: 1;
+                    @include animation(fadeIn 1.2s);
+                    h3.title, .link {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

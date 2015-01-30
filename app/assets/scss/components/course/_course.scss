@@ -1,0 +1,53 @@
+.course-modal {
+    @include reveal-modal-base (
+	$base-style: false,
+	$width: rem-calc(400)
+    );
+    @include reveal-modal-style (
+	$bg: $white,
+	$border: false
+    );
+    max-width: rem-calc(400);
+}
+
+.course-page {
+    &.main {
+	margin-top: 40px;
+    }
+    .container {
+	background-color: $white;
+	border-radius: 15px;
+	padding: 20px;
+	min-height: 300px;
+    }
+    h3.title {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+    }
+    .course {
+	@include button(
+	    $bg: $white,
+	    $padding: $button-sml,
+	    $radius: $global-radius
+	);
+	border: 1px solid $gainsboro;
+	color: $primary-color;
+	font-size: $button-font-med;
+	width: 100%;
+	text-align: left;
+	&:hover {
+	    background-color: $primary-color;
+	    border-radius: $global-radius;
+	    color: $white;
+	}
+
+	&.disabled {
+	    background-color: $iron;
+	    color: $white;
+	}
+	img {
+	    margin-right: 25px;
+	}
+    }
+}

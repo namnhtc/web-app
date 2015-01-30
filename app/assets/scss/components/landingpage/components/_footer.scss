@@ -1,0 +1,48 @@
+@import "animate";
+
+.landingpage {
+  .footer {
+    background: url("assets/img/landingpage/pattern02.png") repeat;
+    height: 480px;
+    .container {
+      height: 480px;
+    }
+    .register.button {
+      margin-top: 70px;
+      font-weight: 700;
+    }
+    h3 {
+      color: $white;
+    }
+    .inline-list.download {
+      margin-top: 50px;
+      padding-left: 60px;
+      > * {
+        background: rgba(255, 255, 255, 0.3);
+        width: 210px;
+        height: 80px;
+        border-radius: $global-radius;
+        margin: 10px;
+        a {
+          border-radius: $global-radius;
+          color: $white;
+          padding: 15px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .ios {
+        background: url("assets/img/landingpage/3-ios.png") no-repeat;
+        background-size: contain;
+      }
+      .android {
+        background: url("assets/img/landingpage/3-adr.png") no-repeat;
+        background-size: contain;
+      }
+      .window {
+        background: url("assets/img/landingpage/3-ios-cs.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<!-- <div ng-bind-html="components/referral/_step_one.html"></div> -->
+<!-- <div ng-bind-html="_step_two.html"></div>
+<div ng-bind-html="components/referral/_step_three.html"></div> -->
+<!-- <div class="slide-animate" ng-include="'template'"></div> -->
+<div ng-switch on="directive" class="slide-animate-container">
+  <div ng-switch-default="referral-body-one">
+    <div class="slide-animate" ng-include src="'components/referral/_step_one.html'"></div>
+  </div>
+  <div ng-switch-when="referral-body-two" class="row">
+    <div class="slide-animate" ng-include src="'components/referral/_step_two.html'"></div>
+  </div>
+  <div ng-switch-when="referral-body-three">
+    <div class="slide-animate" ng-include src="'components/referral/_step_three.html'"></div>
+  </div>
+</div>

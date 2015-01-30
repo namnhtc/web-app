@@ -1,0 +1,38 @@
+.player header {
+  .progress {
+    background: none;
+    position: relative;
+    &.distinct {
+      display: flex;
+      padding-left: -15px;
+      padding-top: 15px;
+      span.meter {
+        display: inline-block;
+        position: relative;
+        margin-right: 4px;
+        width: 15px;
+        height: 5px;
+        &.nothing {
+          background-color: $steel;
+        }
+        &.done {
+          background-color: $gold;
+        }
+      }
+      .ant {
+        background: url("assets/img/lesson-ant.png") no-repeat;
+        background-size: contain;
+        display: inline-block;
+        height: 14px;
+        width: 15px;
+        top: 0;
+        position: absolute;
+        @for $j from 0 through 33 {
+          &.jump-#{$j} {
+            left: $j * 19px;
+          }
+        }
+      }
+    }
+  }
+}

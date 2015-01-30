@@ -1,0 +1,164 @@
+.player {
+  .question {
+    h4.name {
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .lesson-finish-ant {
+      background: url("assets/img/lesson-finish-ant.png") no-repeat;
+    }
+    &.failure {
+      .lesson-finish-ant {
+        background-position: 0 -314px;
+        margin: 0 auto;
+        display: block;
+        width: 250px;
+        height: 315px;
+      }
+    }
+    &.success {
+      margin-top: auto;
+      .slider {
+        .slide {
+          h4 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+          }
+          p {
+            width: 600px;
+            font-size: 18px;
+            color: $steel;
+            margin: 0 auto;
+          }
+        }
+      }
+      .col-left {
+        border-right: 1px solid $gainsboro;
+        height: 450px;
+      }
+      .col-right {
+        padding-top: 30px;
+        text-align: center;
+      }
+      .lesson-finish-ant {
+        background-postition: 0 0;
+        background-size: cover;
+        display: block;
+        width: 110px;
+        height: 138px;
+        margin: 30px auto;
+      }
+      .facebook.share.button {
+        background-color: #33b5e5;
+        margin-top: 40px;
+      }
+      .skill-row {
+        @include grid-row;
+        float: left;
+        text-align: center;
+        position: relative;
+        .skill {
+          background: url("assets/img/hex-units.png") no-repeat;
+          margin: 0 auto 50px;
+          position: relative;
+          padding-top: 27px;
+          width: 140px;
+          height: 200px;
+          a {
+            color: $white;
+            display: block;
+          }
+          .name {
+            margin: 10px auto;
+          }
+          .level {
+            width: 110px;
+            margin: 0 auto;
+          }
+          .icon {
+            margin: 5px auto;
+            height: 70px;
+            width: 70px;
+          }
+          &.success {
+            background-position: -560px 0;
+            color: $white;
+            .strength-bar {
+              height: 41px;
+              background: url("assets/img/hex-strength.png") no-repeat;
+            }
+            .icon {
+              background: url("assets/img/skills-pack-unlocked-70.png") no-repeat;
+            }
+          }
+          $x: 1;
+          @for $i from 0 through 4 {
+            @for $j from 0 through 10 {
+              &.skill-#{$x} {
+                .icon {
+                  background-position: $j * -70px $i * -70px;
+                }
+              }
+              $x: $x + 1;
+            }
+          }
+        }
+      }
+    }
+    .reward {
+      .big-memo-coin {
+        position: relative;
+        background: url("assets/img/lesson-memos-big.png") no-repeat;
+        width: 130px;
+        height: 150px;
+        margin: 0 auto;
+        .quantity {
+          display: block;
+          position: absolute;
+          right: -10px;
+          top: 25px;
+          background-color: red;
+          color: $white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          font-weight: 700;
+          padding: 2px;
+        }
+      }
+      .detail-box {
+        display: block;
+        width: 400px;
+        min-height: 200px;
+        padding: 20px;
+        margin: 30px auto;
+        border: 1px solid $gainsboro;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 4px $gainsboro;
+        color: $steel;
+        .text {
+          @include grid-column($columns: 12);
+          font-weight: 700;
+          text-align: left;
+          margin-bottom: 1rem;
+        }
+        .quantity {
+          @include grid-column($columns: 4);
+          font-weight: 700;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@import "question-select";
+@import "question-translate";
+@import "question-form";
+@import "question-judge";
+@import "question-listen";
+@import "question-name";
+@import "question-speak";
+@import "question-definition-dropdown";

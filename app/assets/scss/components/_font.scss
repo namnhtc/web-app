@@ -1,0 +1,77 @@
+@import "compass/css3/font-face";
+@include font-face("Clear Sans",
+                   font-files("/assets/fonts/clearsans/woff/ClearSans-Regular.woff",
+                              "/assets/fonts/clearsans/ttf/ClearSans-Regular.ttf",
+                              "/assets/fonts/clearsans/svg/ClearSans-Regular.svg"),
+                   "/assets/fonts/clearsans/eot/ClearSans-Regular.eot"
+                  );
+
+@include font-face("icomoon",
+                   font-files("/assets/fonts/icomoon/icomoon.woff",
+                              "/assets/fonts/icomoon/icomoon.ttf",
+                              "/assets/fonts/icomoon/icomoon.svg"),
+                   "/assets/fonts/icomoon/icomoon.eot"
+                  );
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before {
+	content: "\e609";
+}
+.icon-arrow-right:before {
+	content: "\e60a";
+}
+.icon-close:before {
+	content: "\e607";
+}
+.icon-checkmark:before {
+	content: "\e608";
+}
+.icon-lock:before {
+	content: "\e605";
+}
+.icon-flag:before {
+	content: "\e606";
+}
+.icon-heart:before {
+	content: "\e600";
+}
+.icon-heart2:before {
+	content: "\e601";
+}
+.icon-heart-broken:before {
+	content: "\e602";
+}
+.icon-star:before {
+	content: "\f005";
+}
+.icon-gear:before {
+	content: "\f013";
+}
+.icon-map-marker:before {
+	content: "\f041";
+}
+.icon-twitter:before {
+	content: "\f099";
+}
+.icon-facebook:before {
+	content: "\f09a";
+}
+.icon-google-plus:before {
+	content: "\f0d5";
+}
+.icon-bell:before {
+	content: "\f0f3";
+}
